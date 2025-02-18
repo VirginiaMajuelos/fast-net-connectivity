@@ -1,0 +1,40 @@
+{
+  "id": "premium",
+  "name": "Premium Digital",
+  "description": "Tarifa avanzada con opciones premium",
+  "longDescription": "La tarifa Premium Digital es perfecta para quienes buscan el mejor rendimiento y ventajas premium. Incluye fibra óptica de 1 Gbps, una línea fija gratuita, centralita avanzada y múltiples opciones de líneas móviles y dispositivos.",
+  "basePrice": 60.00,
+  "previousPrice": 70.00,
+  "basicFeatures": [
+    { "name": "Fibra 1 Gbps con Router WiFi 6", "icon": "FaWifi" },
+    { "name": "1 Línea fija incluida", "icon": "FaPhone" },
+    { "name": "Centralita Plus incluida", "icon": "FaExchangeAlt" },
+    { "name": "Líneas móviles con datos ilimitados opcionales", "icon": "FaMobile" },
+    { "name": "Soluciones digitales avanzadas", "icon": "FaDigitalTachograph" }
+  ],
+  "features": {
+    "fiber": {
+      "options": [
+        { "id": "fiber-1gbps", "name": "Fibra 1 Gbps", "price": 0, "selected": true, "icon": "FaWifi" }
+      ]
+    },
+    "landline": {
+      "included": true,
+      "description": "1 línea fija incluida",
+      "previousPrice": 5.00,
+      "icon": "FaPhone"
+    },
+    "switchboard": {
+      "options": [
+        { "id": "plus-switchboard", "name": "Centralita Plus", "price": 10.00, "selected": true, "icon": "FaExchangeAlt" }
+      ]
+    },
+    "mobileLines": {
+      "options": [
+        { "id": "basic-mobile-line", "name": "Línea Móvil Básica", "price": 8.00, "quantity": 0, "icon": "FaMobile" },
+        { "id": "intermediate-mobile-line", "name": "Línea Móvil Intermedia", "price": 15.00, "quantity": 0, "icon": "FaMobileAlt" },
+        { "id": "advanced-mobile-line", "name": "Línea Móvil Avanzada", "price": 20.00, "quantity": 0, "icon": "FaMobile" }
+      ]
+    }
+  }
+}

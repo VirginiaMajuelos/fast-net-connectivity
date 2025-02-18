@@ -1,0 +1,121 @@
+{
+  "id": "estandar",
+  "name": "Tarifa Estándar",
+  "description": "Tarifa Estandar Digital con opciones personalizables",
+  "longDescription": "La tarifa estandar es ideal para quienes buscan un plan económico y flexible. Incluye fibra óptica de alta velocidad, una línea fija gratuita y la posibilidad de añadir líneas móviles, soluciones digitales y dispositivos a medida de tus necesidades.",
+  "basePrice": 40.20,
+  "previousPrice": 50.00,
+  "basicFeatures": [
+    { "name": "Fibra 600 Mbps con Router WiFi 6", "icon": "FaWifi" },
+    { "name": "1 Línea fija incluida", "icon": "FaPhone" },
+    { "name": "Opciones de líneas móviles a medida", "icon": "FaMobile" },
+    { "name": "Soluciones digitales opcionales", "icon": "FaDigitalTachograph" }
+  ],
+  "features": {
+    "fiber": {
+      "options": [
+        { "id": "fiber-600", "name": "Fibra 600 Mbps", "price": 0, "icon": "FaWifi" },
+        { "id": "fiber-1gbps", "name": "Fibra 1 Gbps", "price": 15.00, "icon": "FaWifi" }
+      ]
+    },
+    "landline": {
+      "included": true,
+      "description": "1 línea fija incluida",
+      "previousPrice": 5.00,
+      "icon": "FaPhone"
+    },
+    "switchboard": {
+      "options": [
+        { "id": "advanced-switchboard", "name": "Centralita Avanzada", "price": 5.00, "selected": false, "icon": "FaExchangeAlt" }
+      ]
+    },
+    "mobileLines": {
+      "options": [
+        { "id": "basic-mobile-line", "name": "Línea Móvil Básica", "price": 5.00, "quantity": 0, "icon": "FaMobile" },
+        { "id": "intermediate-mobile-line", "name": "Línea Móvil Intermedia", "price": 10.00, "quantity": 0, "icon": "FaMobileAlt" }
+      ]
+    },
+    "devices": {
+      "options": [
+        {
+          "id": "device-galaxy-a25",
+          "name": "Samsung Galaxy A25 5G 128GB",
+          "brand": "Samsung",
+          "model": "Galaxy A25 Black",
+          "price": 5.17,
+          "previousPrice": 15.74,
+          "img": "img/mobiles/img-Galaxy-A25.png",
+          "default": 0,
+          "installment24": "Financiado durante 24 meses",
+          "installment36": "Precio financiado durante 36 meses",
+          "icon": "FaMobile"
+        },
+        {
+          "id": "device-tcl-40",
+          "name": "TCL 40 SE 128GB",
+          "brand": "TLC",
+          "model": "40 SE 128GB Black",
+          "price": 20.99,
+          "previousPrice": 30.50,
+          "img": "img/mobiles/img-iPhone-13.png",
+          "default": 0,
+          "installment24": "Financiado durante 24 meses",
+          "installment36": "Precio financiado durante 36 meses",
+          "icon": "FaMobile"
+        },
+        {
+          "id": "device-realme-c61",
+          "name": "Realme C61 4G 6+256GB",
+          "brand": "Realme",
+          "model": "C61 4G 6+256GB Dark Green",
+          "price": 10.50,
+          "previousPrice": 18.99,
+          "img": "img/mobiles/img-Redmi-Note-12.png",
+          "default": 0,
+          "installment24": "Financiado durante 24 meses",
+          "installment36": "Precio financiado durante 36 meses",
+          "icon": "FaMobileAlt"
+        },
+        {
+          "id": "device-motorola-sg75",
+          "name": "Motorola G75 5G 256GB",
+          "brand": "Motorola",
+          "model": "G75 5G 256GB Black",
+          "price": 30.75,
+          "previousPrice": 40.99,
+          "img": "img/mobiles/img-Galaxy-S23.png",
+          "default": 0,
+          "installment24": "Financiado durante 24 meses",
+          "installment36": "Precio financiado durante 36 meses",
+          "icon": "FaMobile"
+        },
+        {
+          "id": "device-galaxy-a16",
+          "name": "Samsung Galaxy A16 4G 128GB",
+          "brand": "Samsung",
+          "model": "Galaxy A16 4G 128GB Black",
+          "price": 15.60,
+          "previousPrice": 25.80,
+          "img": "img/mobiles/img-Pixel-7.png",
+          "default": 0,
+          "installment24": "Financiado durante 24 meses",
+          "installment36": "Precio financiado durante 36 meses",
+          "icon": "FaGoogle"
+        },
+        {
+          "id": "device-honor-x6b",
+          "name": "Honor X6B",
+          "brand": "Honor",
+          "model": "X6B",
+          "price": 18.25,
+          "previousPrice": 28.49,
+          "img": "img/mobiles/img-OnePlus-11.png",
+          "default": 0,
+          "installment24": "Financiado durante 24 meses",
+          "installment36": "Precio financiado durante 36 meses",
+          "icon": "FaMobile"
+        }
+      ]
+    }   
+  }
+}

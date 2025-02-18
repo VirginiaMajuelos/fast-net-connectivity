@@ -1,0 +1,17 @@
+.container__content{
+  background-color: var(--color-blue-50);
+}
+
+.container__buttons{
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn__wizard{
+  padding: 6px 14px;
+  border: 1px solid var(--color-blue-300);
+  background-color: var(--color-blue-50);
+  cursor: pointer;
+  border-radius: 5px;
+}

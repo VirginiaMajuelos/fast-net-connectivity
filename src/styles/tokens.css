@@ -1,0 +1,82 @@
+/* Variables de estilo (colores, espaciado, etc.) */
+
+/* Paleta de colores */
+
+:root {
+  /* Colores morados */
+/* Colores azulados */
+--color-blue-50:  #ebf4ff;
+--color-blue-100: #d6e8ff;
+--color-blue-200: #b3d4ff;
+--color-blue-300: #8abaff;
+--color-blue-400: #67a2ff;
+--color-blue-500: #7AAFF5; /* Color base */
+--color-blue-600: #3e7ffe;
+--color-blue-700: #2c5bcc;
+--color-blue-800: #1d3e8a;
+--color-blue-900: #0d1f45;
+--color-blue-950: #071022;
+
+
+  /* Colores amarillos */
+  --color-yellow-100: #F6FFD6;
+  --color-yellow-200: #EEFFB3;
+  --color-yellow-300: #E5FE8A;
+  --color-yellow-400: #DDFE67;
+  --color-yellow-500: #D3FE3E;
+  --color-yellow-600: #C7FE01;
+  --color-yellow-700: #93BC01;
+  --color-yellow-800: #647F01;
+  --color-yellow-900: #303D00;
+  --color-yellow-950: #181E00;
+
+  --color-neon: #cdff4f;
+
+  /* Colores para el modo Light */
+  --color-light-1: #f7f7f7;
+  --color-light-2: #dcdcdc;
+  --color-light-3: #aaaaaa;
+  --color-light-4: #484848;
+
+  /* Colores para el modo Dark */
+  --color-dark-1: #0c0a09;
+  --color-dark-2: #1c1c1c;
+  --color-dark-3: #3d3d3d;
+  --color-dark-4: #b6b6b6;
+
+  /* Colores de texto para el modo Dark */
+  --color-primary-dark: var(--color-yellow-600);
+
+  /* Colores para el logo */
+  --logo-color-light: var(--color-yellow-600);
+  --logo-color-dark: var(--color-purple-700);
+
+  /* Variables para los modos de color */
+  --background-color-light: var(--color-purple-50);
+  --text-color-light: var(--color-light-3);
+  --background-color-dark: var(--color-purple-950);
+  --text-color-dark: var(--color-primary-dark);
+
+  /* Variables de tipografía */
+  --font-family-primary: 'Arial', sans-serif;
+  --font-family-secondary: 'Kanit', sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-md: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 24px;
+
+  /* Espaciado */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 32px;
+  --spacing-xl: 64px;
+
+  /* Otros */
+  --border-radius: 8px;
+  --box-shadow-light: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --box-shadow-dark: 0 2px 4px rgba(0, 0, 0, 0.3);
+}

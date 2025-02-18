@@ -1,0 +1,76 @@
+@import './tokens.css';
+
+/* Restablecer los márgenes y paddings predeterminados en todos los elementos */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Tipografía global */
+html {
+  font-family: var(--font-family-secondary);
+  font-size: var(--font-size-md, 16px);
+  line-height: 1.5;
+}
+
+/* Cuerpo de la página */
+body {
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  line-height: 1.5;
+  font-weight: var(--font-weight-regular, 400);
+  margin: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-align: center;
+  background-color: var(--color-blue-50);
+}
+
+/* Estilos básicos para títulos */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: var(--font-weight-bold, 700);
+  margin-bottom: var(--spacing-sm, 8px);
+}
+
+/* Estilos para párrafos */
+p {
+  margin-bottom: var(--spacing-md, 16px);
+}
+
+/* Espaciado entre secciones */
+section {
+  padding: var(--spacing-lg, 32px);
+}
+
+/* Enlaces */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Reseteo de algunos estilos para listas */
+ul, ol {
+  list-style-type: none;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+input, button, textarea {
+  font: inherit;
+}
+
+/* Clases para el tema Light */
+
+
+/* Aplicación global de fondo y color de texto */
+body main {
+  background-color: var(--color-blue-100);
+  color: var(--text-color);
+}

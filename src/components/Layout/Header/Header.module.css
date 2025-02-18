@@ -1,0 +1,47 @@
+.header {
+  background: linear-gradient(135deg, var(--color-blue-500), var(--color-blue-800));
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.header__content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.header__title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.header__subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.header__price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.header__tokens {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.header__token {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  opacity: 0.8;
+  background-color: var(--color-blue-300);
+  transition: transform 0.3s ease;
+}
+
+.header__token:hover {
+  transform: scale(1.2);
+  opacity: 1;
+}
