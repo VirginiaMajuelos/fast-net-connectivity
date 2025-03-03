@@ -35,7 +35,7 @@
         { "id": "intermediate-mobile-line", "name": "Línea Móvil Intermedia", "price": 10.00, "quantity": 0, "icon": "FaMobileAlt" }
       ]
     },
-    "devices": {
+    "mobileDevices": {
       "options": [
         {
           "id": "device-galaxy-a25",
@@ -44,8 +44,8 @@
           "model": "Galaxy A25 Black",
           "price": 5.17,
           "previousPrice": 15.74,
-          "img": "img/mobiles/img-Galaxy-A25.png",
-          "default": 0,
+          "img": "/assets/mobiles/img-Galaxy A25.png",
+          "quantity": 0,
           "installment24": "Financiado durante 24 meses",
           "installment36": "Precio financiado durante 36 meses",
           "icon": "FaMobile"
@@ -57,8 +57,8 @@
           "model": "40 SE 128GB Black",
           "price": 20.99,
           "previousPrice": 30.50,
-          "img": "img/mobiles/img-iPhone-13.png",
-          "default": 0,
+          "img": "/assets/mobiles/TCL40-SE.png",
+          "quantity": 0,
           "installment24": "Financiado durante 24 meses",
           "installment36": "Precio financiado durante 36 meses",
           "icon": "FaMobile"
@@ -70,21 +70,21 @@
           "model": "C61 4G 6+256GB Dark Green",
           "price": 10.50,
           "previousPrice": 18.99,
-          "img": "img/mobiles/img-Redmi-Note-12.png",
-          "default": 0,
+          "img": "/assets/mobiles/img-realme-c61.png",
+          "quantity": 0,
           "installment24": "Financiado durante 24 meses",
           "installment36": "Precio financiado durante 36 meses",
           "icon": "FaMobileAlt"
         },
         {
-          "id": "device-motorola-sg75",
+          "id": "device-motorola-g75",
           "name": "Motorola G75 5G 256GB",
           "brand": "Motorola",
           "model": "G75 5G 256GB Black",
           "price": 30.75,
           "previousPrice": 40.99,
-          "img": "img/mobiles/img-Galaxy-S23.png",
-          "default": 0,
+          "img": "/assets/mobiles/Motorola-G55.png",
+          "quantity": 0,
           "installment24": "Financiado durante 24 meses",
           "installment36": "Precio financiado durante 36 meses",
           "icon": "FaMobile"
@@ -96,8 +96,8 @@
           "model": "Galaxy A16 4G 128GB Black",
           "price": 15.60,
           "previousPrice": 25.80,
-          "img": "img/mobiles/img-Pixel-7.png",
-          "default": 0,
+          "img": "/assets/mobiles/Samsung-A16.png",
+          "quantity": 0,
           "installment24": "Financiado durante 24 meses",
           "installment36": "Precio financiado durante 36 meses",
           "icon": "FaGoogle"
@@ -109,8 +109,8 @@
           "model": "X6B",
           "price": 18.25,
           "previousPrice": 28.49,
-          "img": "img/mobiles/img-OnePlus-11.png",
-          "default": 0,
+          "img": "/assets/mobiles/Honor-X6B.png",
+          "quantity": 0,
           "installment24": "Financiado durante 24 meses",
           "installment36": "Precio financiado durante 36 meses",
           "icon": "FaMobile"

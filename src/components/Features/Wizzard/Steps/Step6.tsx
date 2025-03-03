@@ -1,7 +1,12 @@
-import React from 'react';
+import styles from '../Wizard.module.css';
+import { WizardTypes } from '../WizardTypes.types';
 
-export const Step6: React.FC = () => (
-  <div>
-    <h1>Página 6</h1>
-  </div>
-);
+const Step6: React.FC<WizardTypes> = () => {
+  return (
+    <div className={styles.step}>
+      <h2>Paso 6</h2>
+    </div>
+  );
+};
+
+export default Step6;

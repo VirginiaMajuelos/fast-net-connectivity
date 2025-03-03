@@ -50,7 +50,12 @@ export interface Tariff {
     mobileDevices?: { 
       options: Array<{
         id: string;
+        brand: string;
+        model: string, 
         name: string;
+        img: string;
+        previousPrice: number;
+        installment24: string;
         price: number;
         quantity: number;
         icon: string;
@@ -58,3 +63,27 @@ export interface Tariff {
     };
   };
 }
+
+
+export type CartItem = { 
+  id: string; 
+  name: string; 
+  price: number; 
+  quantity: number 
+};
+
+export type CartState = { 
+  items: CartItem[]; 
+  totalPrice: number 
+};
+
+export type CartContextType = {
+  cart: CartState;
+  //fiberPrice?: number;
+  updateFiberPrice: (price: number) => void;
+  addProduct: (product: CartItem) => void;
+  removeProduct: (id: string) => void;
+  getTotalPrice: () => number;
+};
+
+

@@ -1,7 +1,15 @@
-import React from 'react';
+import litePlan from '../../../../services/data/estandar.json';
+import { CardProductsMobiles } from '../../CardProducts/CardProductsMobiles';
+import styles from '../Wizard.module.css';
+import { WizardTypes } from '../WizardTypes.types';
 
-export const Step3: React.FC = () => (
-  <div>
-    <h1>Página 3</h1>
-  </div>
-);
+const Step3: React.FC<WizardTypes> = () => {
+  return (
+    <div className={styles.step}>
+      <h2>Paso 3</h2>
+      <CardProductsMobiles litePlan={litePlan} />
+    </div>
+  );
+};
+
+export default Step3;

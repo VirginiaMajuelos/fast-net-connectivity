@@ -1,10 +1,5 @@
 /* Fiber.module.css */
-.container__box {
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  align-items: baseline;
-}
+
 .container__picker {
   display: flex;
   flex-direction: row;

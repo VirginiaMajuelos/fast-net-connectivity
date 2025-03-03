@@ -1,0 +1,37 @@
+.container__box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+  align-items: baseline;
+
+}
+.box{
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid var(--color-blue-300);
+  background-color: var(--color-blue-50);
+  padding: 40px;
+}
+
+.btn__counter{
+  background-color: var(--color-blue-300);
+  width: 1.5rem;
+  margin: 10px;
+  border-radius: 5px;
+  font-size: small;
+  cursor:pointer;
+}
+
+.container__counter{
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: center;
+}
+
+
+.productImage{
+  width: 100px;
+  height: 70px;
+}

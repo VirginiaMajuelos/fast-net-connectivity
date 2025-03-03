@@ -1,13 +1,8 @@
 import React, { createContext, useContext, useState } from 'react';
 
-interface WizardContextType {
-  activePageIndex: number;
-  goNextPage: () => void;
-  goPrevPage: () => void;
-  steps: number;
-}
+import { WizardTypes } from '../components/Features/Wizzard/WizardTypes.types';
 
-const WizardContext = createContext<WizardContextType | undefined>(undefined);
+const WizardContext = createContext<WizardTypes | undefined>(undefined);
 
 export const useWizard = () => {
   const context = useContext(WizardContext);
@@ -17,14 +12,14 @@ export const useWizard = () => {
   return context;
 };
 
-export const WizardProvider: React.FC<{children: React.ReactNode; steps: number}> = ({children, steps}) => {
-  const [activePageIndex, setActivePageIndex] = useState(0);
+export const WizardProvider: React.FC<{children: React.ReactNode}> = ({children}) => {
+  const [currentStep, setcurrentStep] = useState(0);
 
-  const goNextPage = () => setActivePageIndex((index) => Math.min(index + 1, steps - 1));
-  const goPrevPage = () => setActivePageIndex((index) => Math.max(index - 1, 0));
+  const goNextPage = () => setcurrentStep((prev) => Math.min(prev + 1, 5));
+  const goPrevPage = () => setcurrentStep((prev) => Math.max(prev - 1, 0));
 
   return (
-    <WizardContext.Provider value={{ activePageIndex, goNextPage, goPrevPage, steps }}>
+    <WizardContext.Provider value={{ currentStep, goNextPage, goPrevPage}}>
       {children}
     </WizardContext.Provider>
   );
