@@ -1,10 +1,10 @@
-import React from 'react';
-import { FaDigitalTachograph, FaExchangeAlt, FaMobile, FaMobileAlt, FaPhone, FaWifi } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { FaChartLine, FaDigitalTachograph, FaExchangeAlt, FaMobile, FaMobileAlt, FaPhone, FaWifi } from 'react-icons/fa';
 
 import { Tariff } from '../../../services/data/types';
+import { ContactForm } from '../../Features/ContactForm/ContactForm';
+import { Modal } from '../Modal/Modal';
 import styles from './CardItem.module.css';
-
 
 const iconMap: Record<string, JSX.Element> = {
   FaWifi: <FaWifi />,
@@ -12,39 +12,39 @@ const iconMap: Record<string, JSX.Element> = {
   FaMobile: <FaMobile />,
   FaMobileAlt: <FaMobileAlt />,
   FaDigitalTachograph: <FaDigitalTachograph />,
-  FaExchangeAlt: <FaExchangeAlt />,
+  FaChartLine: <FaChartLine />,
+  FaExchangeAlt: <FaExchangeAlt />
 };
 
 export const CardItem: React.FC<{ plan: Tariff }> = ({ plan }) => {
+  const [openModalId, setOpenModalId] = useState<string | null>(null);
+
+  const handleShowModal = (id: string) => setOpenModalId(id);
+  const handleCloseModal = () => setOpenModalId(null);
+
   return (
     <div className={styles.card}>
-      <h2>{plan.name}</h2>
-      <ul>
-        {plan.features.fiber.options.map((feature) => (
-          <li key={feature.id}>
-            {iconMap[feature.icon]} {feature.name}
-          </li>
-        ))}
-        {plan.features.landline.included && (
-          <li>
-            {iconMap[plan.features.landline.icon]} {plan.features.landline.description}
-          </li>
-        )}
-        {plan.features.switchboard.options.map((option) => (
-          <li key={option.id}>
-            {iconMap[option.icon]} {option.name}
-          </li>
-        ))}
-        {plan.features.mobileLines.options.map((option) => (
-          <li key={option.id}>
-            {iconMap[option.icon]} {option.name} - {option.price}€
-          </li>
-        ))}
-      </ul>
-      <p className={styles.price__container}>Desde <span className={styles.price}>{plan.basePrice}€/mes</span></p>
-
-      <Link to={`/tarifa-${plan.id}`} className={styles.button}>Ver detalles</Link>
+      <div className={styles.card__content}>
+        <h2>{plan.name}</h2>
+        <ul>
+          {plan.basicFeatures.map((feature) => (
+            <li key={feature.id} className={styles.card__list}>
+              <div className={styles.iconTextWrapper}>
+                {iconMap[feature.icon]} <p>{feature.name}</p>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div className={styles.card__footer}>
+        <p className={styles.price__container}>
+          Desde <span className={styles.price}>{plan.basePrice}</span>€/mes
+        </p>
+        <button onClick={() => handleShowModal('contactFormModal')} className={styles.button}>Me interesa</button>
+      </div>
+      <Modal isOpen={openModalId === 'contactFormModal'} onClose={handleCloseModal}>
+        <ContactForm />
+      </Modal>
     </div>
   );
 };
-

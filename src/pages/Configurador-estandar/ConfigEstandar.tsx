@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 
 import Wizard from '../../components/Features/Wizzard/Wizard';
-import { Modal } from '../../components/UI/Modal/Modal';
+import { Logo } from '../../components/UI/Logo/Logo';
 import { TotalPrice } from '../../components/UI/TotalPrice/TotalPrice';
 import { CartProvider, useCart } from '../../context/CartContext';
 import { WizardProvider } from '../../context/WizardContext';
-import litePlan from '../../services/data/estandar.json';
+import styles from './ConfigEstandar.module.css';
 
 export const ConfigEstandar: React.FC = () => {
   return (
@@ -21,15 +21,20 @@ const ConfigEstandarContent: React.FC = () => {
   const [openModalId, setOpenModalId] = useState<string | null>(null);
   const { getTotalPrice } = useCart();
   
-  //const handleShowModal = (id: string) => setOpenModalId(id);
+  const handleShowModal = (id: string) => setOpenModalId(id);
   const handleCloseModal = () => setOpenModalId(null);
 
   const totalPrice = getTotalPrice();
 
 
+
   return (
     <section>
-      <h3>Dashboard Lite</h3>
+      <Logo />
+      <div className={styles.container__header}>
+        <h1>Conectividad Avanzada</h1>
+        <h2>Personaliza tu tarifa de Fibra y móvil para tu empresa:</h2>
+      </div>
       <Wizard />
       {/* <div className={styles.box}>
         <p>Centralita</p>
@@ -37,16 +42,12 @@ const ConfigEstandarContent: React.FC = () => {
       </div> */}
 
 
-      <TotalPrice total={totalPrice} />
+      
+      <TotalPrice total={totalPrice} openModalId={openModalId} 
+        handleShowModal={handleShowModal} 
+        handleCloseModal={handleCloseModal} />
 
-      {/* Modales dinámicos */}
-      <Modal dataId={litePlan.features.mobileLines.options[0].id} isOpen={openModalId === litePlan.features.mobileLines.options[0].id} onClose={handleCloseModal}>
-        <p>Contenido de la modal para líneas móviles</p>
-      </Modal>
 
-      <Modal dataId={litePlan.features.switchboard.options[0].id} isOpen={openModalId === litePlan.features.switchboard.options[0].id} onClose={handleCloseModal}>
-        <p>Contenido de la modal para centralita</p>
-      </Modal>
     </section>
   );
 };

@@ -4,18 +4,44 @@
   border-radius: 5px;
   background-color: #f9f9f9;
   text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.1);
+  height: 78px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  color: var(--color-blue-800)
+
 }
 
-.title {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 8px;
-  color: #333;
+.list__bullets{
+  text-decoration: dotted;
 }
 
 .price {
-  font-size: 24px;
-  font-weight: bold;
-  color: #007bff;
+  font-size: 2.750rem;
+  font-weight: 600;
+}
+
+p{
   margin: 0;
+}
+
+.button {
+  
+  padding: 10px 20px;
+  background-color: var(--color-blue-600);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--color-blue-700);
 }

@@ -1,0 +1,72 @@
+/* VodafoneRedInfinity.module.css */
+.container {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 30px;
+}
+
+.featureCard {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  text-align: center;
+}
+
+.icon {
+  font-size: 2rem;
+  color: #0073e6;
+  margin-bottom: 15px;
+}
+
+.featureCard h3 {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.featureCard p {
+  font-size: 1rem;
+  color: #777;
+}
+
+.description {
+  margin-top: 30px;
+  text-align: left;
+}
+
+.description h2 {
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.description p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.description ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.description li {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: bold;
+  margin-top: 20px;
+}

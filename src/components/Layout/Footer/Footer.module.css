@@ -1,0 +1,20 @@
+.footer {
+  /* position: absolute; */
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(to bottom, var(--color-blue-800), var(--color-blue-900));
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.footer a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}

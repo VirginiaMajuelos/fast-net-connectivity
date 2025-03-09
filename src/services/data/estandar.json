@@ -3,16 +3,22 @@
   "name": "Tarifa Estándar",
   "description": "Tarifa Estandar Digital con opciones personalizables",
   "longDescription": "La tarifa estandar es ideal para quienes buscan un plan económico y flexible. Incluye fibra óptica de alta velocidad, una línea fija gratuita y la posibilidad de añadir líneas móviles, soluciones digitales y dispositivos a medida de tus necesidades.",
-  "basePrice": 40.20,
+  "basePrice": 42,
   "previousPrice": 50.00,
   "basicFeatures": [
-    { "name": "Fibra 600 Mbps con Router WiFi 6", "icon": "FaWifi" },
-    { "name": "1 Línea fija incluida", "icon": "FaPhone" },
-    { "name": "Opciones de líneas móviles a medida", "icon": "FaMobile" },
-    { "name": "Soluciones digitales opcionales", "icon": "FaDigitalTachograph" }
+    {"id":"1", "name": "Fibra 600 Mbps con Router WiFi 6", "icon": "FaWifi" },
+    {"id":"2", "name": "1 Línea fija incluida", "icon": "FaPhone" },
+    {"id":"3", "name": "Opciones de líneas móviles a medida", "icon": "FaMobile" },
+    { "id":"4","name": "Soluciones digitales opcionales", "icon": "FaChartLine" }
   ],
   "features": {
     "fiber": {
+      "description": "Selecciona la velocidad que necesites",
+      "features": [
+        {"id": "detail-1", "detail": "Télefono fijo y cuota de línea"},
+        {"id": "detail-2","detail": "Incluye Router WiFi 6"},
+        {"id": "detail-3","detail": "Alta e instalación gratis"}
+      ],
       "options": [
         { "id": "fiber-600", "name": "Fibra 600 Mbps", "price": 0, "icon": "FaWifi" },
         { "id": "fiber-1gbps", "name": "Fibra 1 Gbps", "price": 15.00, "icon": "FaWifi" }
@@ -24,18 +30,52 @@
       "previousPrice": 5.00,
       "icon": "FaPhone"
     },
-    "switchboard": {
+    "mobileLines": {
+      "id": "estandar-lineas-mobiles", 
+      "name": "Líneas móviles",
+      "description": "1 Línea móvil Básica includa. Puedes añadir las líneas que necesites", 
       "options": [
-        { "id": "advanced-switchboard", "name": "Centralita Avanzada", "price": 5.00, "selected": false, "icon": "FaExchangeAlt" }
+        {
+          "id": "basic-mobile-line", 
+          "name": "Línea Móvil Básica", 
+          "price": 5.00, 
+          "quantity": 0, 
+          "icon": "FaMobile", 
+          "features": [
+            {"id": "detail-1", "detail": "Datos y minutos ilimitados. Velocidad Máxima 5G."},
+            {"id": "detail-2", "detail": "Roaming en la Zona 1 Europa y Reino Unido."},
+            {"id": "detail-3", "detail": "500 min en llamadas internacionales Zona 1."}
+          ]
+        },
+        {
+          "id": "intermediate-mobile-line", 
+          "name": "Línea Móvil Intermedia", 
+          "price": 10.00, 
+          "quantity": 0, 
+          "icon": "FaMobileAlt",
+          "features": [
+            {"id": "detail-1", "detail": "Datos y minutos ilimitados."},
+            {"id": "detail-2", "detail": "Roaming en la Zona 1 Europa y Reino Unido."}
+          ]
+        }
       ]
     },
-    "mobileLines": {
-      "options": [
-        { "id": "basic-mobile-line", "name": "Línea Móvil Básica", "price": 5.00, "quantity": 0, "icon": "FaMobile" },
-        { "id": "intermediate-mobile-line", "name": "Línea Móvil Intermedia", "price": 10.00, "quantity": 0, "icon": "FaMobileAlt" }
+    "centralita": {
+      "id": "estandar-centralita", 
+      "name": "Centralita Avanzada", 
+      "price": 5.00, 
+      "selected": false, 
+      "icon": "FaExchangeAlt",
+      "features": [
+        {"id": "detail-1", "detail": "Cola de llamadas"},
+        {"id": "detail-2","detail": "Presentación número de cabecera"},
+        {"id": "detail-3","detail": "Grupo de captura"}
       ]
     },
     "mobileDevices": {
+      "id": "estandar-despositivos-mobiles", 
+      "name": "Dispositivos Móviles",
+      "description": "Puedes añadir los dispositivos que necesites", 
       "options": [
         {
           "id": "device-galaxy-a25",
@@ -116,6 +156,54 @@
           "icon": "FaMobile"
         }
       ]
-    }   
+    },
+    "solutions": {
+      "id": "estandar-servicios", 
+      "name": "Servicios Digitales",
+      "description": "Añade servicios que impulsarán tu empresa", 
+
+      "options": [
+        {
+          "id": "solution-cloud-backup",
+          "name": "Backup en la Nube",
+          "description": "Servicio de copias de seguridad en la nube con cifrado de extremo a extremo, asegurando la protección de los datos de tu empresa.",
+          "price": 9.99,
+          "previousPrice": 14.99,
+          "quantity": 0,
+          "pricePerLic": "Precio por licencia/mes",
+          "icon": "FaCloud"
+        },
+        {
+          "id": "solution-digital-marketing",
+          "name": "Marketing Digital",
+          "description": "Plataforma de marketing digital con gestión de redes sociales, automatización de email y análisis de datos.",
+          "price": 19.99,
+          "previousPrice": 24.99,
+          "quantity": 0,
+          "pricePerLic": "Precio por licencia/mes",
+          "icon": "FaBullhorn"
+        },
+        {
+          "id": "solution-cybersecurity",
+          "name": "Ciberseguridad Avanzada",
+          "description": "Solución integral de ciberseguridad con firewall, protección contra malware y gestión de accesos.",
+          "price": 15.50,
+          "previousPrice": 20.00,
+          "quantity": 0,
+          "pricePerLic": "Precio por dispositivo/mes",
+          "icon": "FaShieldAlt"
+        },
+        {
+          "id": "solution-erp-system",
+          "name": "ERP para Pymes",
+          "description": "Software ERP para la gestión de finanzas, inventario y recursos humanos, optimizando la productividad de tu negocio.",
+          "price": 29.99,
+          "previousPrice": 39.99,
+          "quantity": 0,
+          "pricePerLic": "Precio por licencia/mes",
+          "icon": "FaServer"
+        }
+      ]
+    }
   }
 }

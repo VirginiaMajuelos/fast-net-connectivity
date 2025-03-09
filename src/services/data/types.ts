@@ -2,10 +2,21 @@ export interface Tariff {
   id: string;
   name: string;
   description: string;
+  longDescription?: string;
   basePrice: number;
   previousPrice: number;
+  basicFeatures: Array<{
+    id:string;
+    name: string;
+    icon: string;
+  }>;
   features: {
     fiber: {
+      description: string; 
+      features: Array<{
+        id: string;
+        detail: string;
+      }>;
       options: Array<{
         id: string;
         name: string;
@@ -20,70 +31,92 @@ export interface Tariff {
       previousPrice: number;
       icon: string;
     };
-    switchboard: {
-      options: Array<{
+    centralita: {
         id: string;
         name: string;
         price: number;
         selected?: boolean;
         icon: string;
-      }>;
+        features: Array<{
+          id: string;
+          detail: string;
+        }>;
     };
     mobileLines: {
+      id: string;
+      name: string; 
+      description: string;
       options: Array<{
         id: string;
         name: string;
         price: number;
         quantity: number;
         icon: string;
-      }>;
-    };
-    digitalSolutions?: {  
-      options: Array<{
-        id: string;
-        name: string;
-        price: number;
-        quantity: number;
-        icon: string;
+        features: Array<{
+          id: string;
+          detail: string;
+        }>;
       }>;
     };
     mobileDevices?: { 
+      id: string;
+      name: string; 
+      description: string;
       options: Array<{
         id: string;
         brand: string;
-        model: string, 
+        model: string;
         name: string;
         img: string;
         previousPrice: number;
-        installment24: string;
         price: number;
         quantity: number;
+        installment24: string;
+        installment36: string;
+        icon: string;
+      }>;
+    };
+    solutions?: {  
+      id: string;
+      name: string; 
+      description: string;
+      options: Array<{
+        id: string;
+        name: string;
+        description: string;
+        price: number;
+        previousPrice: number;
+        quantity: number;
+        pricePerLic: string;
         icon: string;
       }>;
     };
   };
 }
 
-
 export type CartItem = { 
   id: string; 
   name: string; 
   price: number; 
-  quantity: number 
+  quantity: number;
 };
 
 export type CartState = { 
   items: CartItem[]; 
-  totalPrice: number 
+  totalPrice: number;
 };
 
 export type CartContextType = {
   cart: CartState;
-  //fiberPrice?: number;
   updateFiberPrice: (price: number) => void;
   addProduct: (product: CartItem) => void;
   removeProduct: (id: string) => void;
   getTotalPrice: () => number;
+  getSelectedProducts: () => CartItem[];
+  fiberPrice: number;
 };
 
-
+export interface ProgressWizardProps {
+  currentStep: number;
+  totalSteps: number;
+}

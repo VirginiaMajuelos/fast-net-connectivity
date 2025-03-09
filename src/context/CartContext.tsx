@@ -14,22 +14,33 @@ export const useCart = () => {
 };
 
 export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [cart, setCart] =useState<CartState>({ items: [], totalPrice: 40.20});
+  const initialItems: CartItem[] = [
+    { id: 'linea-fija', name: 'Línea fija incluida', price: 0, quantity: 1 },
+    { id: 'fibra', name: 'Fibra incluida', price: litePlan.basePrice, quantity: 1 },
+    { id: 'centralita', name: 'Centralita incluida', price: 0, quantity: 1 },
+  ];
+
+  const [cart, setCart] = useState<CartState>({
+    items: initialItems,
+    totalPrice: litePlan.basePrice, // La fibra ya está incluida
+  });
+
+  const [fiberPrice, setFiberPrice] = useState(0);
 
   const updateFiberPrice = (price: number) => {
+    setFiberPrice(price);
     setCart((prevCart) => ({
       ...prevCart,
-      totalPrice: litePlan.basePrice + price, 
+      totalPrice:
+        litePlan.basePrice +
+        price +
+        prevCart.items.reduce((acc, item) => acc + item.price * item.quantity, 0),
     }));
   };
-  
 
   const addProduct = (product: CartItem) => {
-    //Actualizar el carrito
     setCart((prevCart) => {
-      //Comprobamos si existe el producto
       const existingItem = prevCart.items.find((item) => item.id === product.id);
-      //si existe agregamos 1 cantidad
       const updatedItems = existingItem
         ? prevCart.items.map((item) =>
           item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
@@ -38,14 +49,13 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
       return { ...prevCart, items: updatedItems };
     });
   };
-  
 
   const removeProduct = (id: string) => {
     setCart((prevCart) => {
       const updateItems = prevCart.items
-        .map((item) => item.id === id ? {...item, quantity: item.quantity -1 } : item )
+        .map((item) => (item.id === id ? { ...item, quantity: item.quantity - 1 } : item))
         .filter((item) => item.quantity > 0);
-      return { ...prevCart, items: updateItems};
+      return { ...prevCart, items: updateItems };
     });
   };
 
@@ -53,10 +63,14 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
     return cart.items.reduce((total, item) => total + item.price * item.quantity, cart.totalPrice);
   };
 
-
+  const getSelectedProducts = () => {
+    return cart.items.filter((item) => item.quantity > 0);
+  };
 
   return (
-    <CartContext.Provider value={{ cart, updateFiberPrice, getTotalPrice, addProduct, removeProduct }}>
+    <CartContext.Provider
+      value={{ cart, fiberPrice, updateFiberPrice, getTotalPrice, addProduct, removeProduct, getSelectedProducts }}
+    >
       {children}
     </CartContext.Provider>
   );

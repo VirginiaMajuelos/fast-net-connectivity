@@ -1,0 +1,52 @@
+{
+  "title": "¿Por qué contratar Conectividad Avanzada?",
+  "features": [
+    {
+      "icon": "FaCogs",
+      "title": "Configurable y flexible",
+      "description": "Contrata sólo lo que necesitas para tu empresa y empleados."
+    },
+    {
+      "icon": "FaShieldAlt",
+      "title": "Comunicaciones seguras",
+      "description": "Tus datos, empleados y clientes seguros ante ciberataques. Servicio de Asistencia Técnica todo el año."
+    },
+    {
+      "icon": "FaWifi",
+      "title": "Red 5G",
+      "description": "Navega a máxima velocidad con 5G y disfruta de una mayor calidad de vídeo y voz."
+    },
+    {
+      "icon": "FaUserTie",
+      "title": "Asesor personalizado",
+      "description": "Aconsejará a tu empresa durante todo el tiempo que dure tu relación con nosotros."
+    }
+  ],
+  "description": {
+    "title": "Conectividad Avanzada: el mejor pack de fibra y móvil para empresas",
+    "text1": "Conectividad Avanzada ofrece el pack de fibra y móvil para empresas ideal para garantizar la conectividad, flexibilidad y seguridad que tu negocio necesita. Diseñado especialmente para pequeñas y medianas empresas, este servicio combina tecnología avanzada y herramientas digitales que facilitan la gestión de tus comunicaciones y optimizan el rendimiento de tu equipo.",
+    "text2": "Con Conectividad Avanzada, disfrutarás de fibra óptica de alta velocidad, llamadas ilimitadas a móviles y fijos, y una centralita virtual que permite gestionar todas las comunicaciones de forma centralizada. Además, contarás con soluciones digitales que mejoran la productividad y la seguridad de tu negocio, adaptándose a las necesidades específicas de tu empresa."
+  },
+  "benefits": {
+    "title": "Beneficios principales del pack fibra y móvil para empresas",
+    "list": [
+      {
+        "title": "Máxima conectividad",
+        "description": "Fibra óptica de alta velocidad y cobertura móvil nacional e internacional, ideal para mantener a tu equipo siempre conectado."
+      },
+      {
+        "title": "Gestión centralizada",
+        "description": "Una plataforma que unifica las comunicaciones internas y externas, sin necesidad de equipos adicionales."
+      },
+      {
+        "title": "Seguridad avanzada",
+        "description": "Protege tus datos empresariales con soluciones integradas que garantizan la tranquilidad de tu negocio."
+      },
+      {
+        "title": "Flexibilidad",
+        "description": "Diseña tu tarifa a medida, pagando solo por lo que realmente necesitas."
+      }
+    ]
+  },
+  "price": "Configura tu tarifa desde solo 44,13 €/mes y da un salto de calidad en la conectividad de tu empresa. Con Conectividad Avanzada, tendrás el aliado perfecto para afrontar los retos digitales con éxito."
+}

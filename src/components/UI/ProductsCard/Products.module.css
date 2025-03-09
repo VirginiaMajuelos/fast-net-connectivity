@@ -1,6 +1,16 @@
-.container__plans{
-display: flex;
-flex-direction: row;
-align-content: center;
-justify-content: center;
+.container__section {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Asegura que todo quede alineado */
+  justify-content: center;
+  padding: 2rem;
+  gap: 1rem; /* Espacio entre las tarjetas y el banner */
+}
+
+.container__plans {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem; /* Espacio entre las tarjetas */
 }

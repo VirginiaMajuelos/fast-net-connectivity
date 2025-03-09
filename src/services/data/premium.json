@@ -10,7 +10,7 @@
     { "name": "1 Línea fija incluida", "icon": "FaPhone" },
     { "name": "Centralita Plus incluida", "icon": "FaExchangeAlt" },
     { "name": "Líneas móviles con datos ilimitados opcionales", "icon": "FaMobile" },
-    { "name": "Soluciones digitales avanzadas", "icon": "FaDigitalTachograph" }
+    { "name": "Soluciones digitales avanzadas", "icon": "FaChartLine" }
   ],
   "features": {
     "fiber": {

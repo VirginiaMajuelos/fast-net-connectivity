@@ -1,0 +1,57 @@
+.banner {
+  width: 720px; /* Igual al ancho de las dos tarjetas */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-blue-50);
+  padding: 20px;
+  border-radius: 25px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  margin: 10px auto; /* Asegura que se centre */
+  color: var(--color-blue-800);
+  text-align: left;
+  gap: 1rem;
+}
+
+.bannerContent{
+  max-width: 60%;
+  color: var(--color-blue-800);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+.bannerContent svg{
+  color: var(--color-blue-600); /* Puedes cambiar este valor para modificar el color del icono */
+}
+
+.bannerTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.bannerDescription {
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+.bannerContent__text{
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  padding: 12px 20px;
+  background-color: var(--color-blue-700);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--color-blue-800);
+}
+

@@ -1,0 +1,38 @@
+.btn__counter{
+  cursor:pointer;
+  /* font-size: small; */
+  background-color: var(--color-blue-300);
+  border-radius: 0.375rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  margin: 10px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: var(--color-blue-600);
+  color:white;
+
+}
+
+.container__counter{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.counter__quantity{
+  text-align: center;
+    width: 58px;
+    height: 50px;
+    background-color: var(--color-blue-50);
+    border: 1px solid;
+    border-color:  var(--color-blue-600);
+    border-radius: 0.375rem;
+    padding: 0 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
