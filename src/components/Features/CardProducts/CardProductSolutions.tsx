@@ -33,10 +33,10 @@ export const CardProductsSolutions: React.FC<{ litePlan: Tariff }> = ({ litePlan
           return (
             <li key={product.id}>
               <div className={`${styles.box} ${quantity > 0 ? styles.box__isActive : ''}`}>
-                <h4>
+                <p className={styles.title__card}>
                   {IconComponent && <IconComponent className={styles.icon} />} {/* Renderiza el icono si existe */}
                   {product.name}
-                </h4>
+                </p>
                 <p>{product.description}</p>
                 <Price>{product.price}</Price>
               

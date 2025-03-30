@@ -12,7 +12,7 @@ export const Logo: React.FC = () => {
         <div className={styles.icon}>
           <FaWifi className={styles.wifiIcon} />
         </div>
-            FASTNETWORK
+            FASTNET
       </div>
     </Link>
   );

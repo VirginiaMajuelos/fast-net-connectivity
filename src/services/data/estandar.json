@@ -13,15 +13,17 @@
   ],
   "features": {
     "fiber": {
-      "description": "Selecciona la velocidad que necesites",
+      "name": "Fibra Óptica + Línea Fija", 
+      "description": "Incluídas en tu pack.", 
+      "icon": "FaWifi",
       "features": [
         {"id": "detail-1", "detail": "Télefono fijo y cuota de línea"},
         {"id": "detail-2","detail": "Incluye Router WiFi 6"},
         {"id": "detail-3","detail": "Alta e instalación gratis"}
       ],
       "options": [
-        { "id": "fiber-600", "name": "Fibra 600 Mbps", "price": 0, "icon": "FaWifi" },
-        { "id": "fiber-1gbps", "name": "Fibra 1 Gbps", "price": 15.00, "icon": "FaWifi" }
+        { "id": "fiber-600", "name": "Fibra 600 Mbps",  "price": 0, "icon": "FaWifi", "category": "Fibra:"},
+        { "id": "fiber-1gbps", "name": "Fibra 1 Gbps", "price": 15.00, "icon": "FaWifi", "category": "Fibra:" }
       ]
     },
     "landline": {
@@ -31,38 +33,96 @@
       "icon": "FaPhone"
     },
     "mobileLines": {
-      "id": "estandar-lineas-mobiles", 
-      "name": "Líneas móviles",
-      "description": "1 Línea móvil Básica includa. Puedes añadir las líneas que necesites", 
-      "options": [
-        {
-          "id": "basic-mobile-line", 
-          "name": "Línea Móvil Básica", 
-          "price": 5.00, 
-          "quantity": 0, 
-          "icon": "FaMobile", 
-          "features": [
-            {"id": "detail-1", "detail": "Datos y minutos ilimitados. Velocidad Máxima 5G."},
-            {"id": "detail-2", "detail": "Roaming en la Zona 1 Europa y Reino Unido."},
-            {"id": "detail-3", "detail": "500 min en llamadas internacionales Zona 1."}
-          ]
-        },
-        {
-          "id": "intermediate-mobile-line", 
-          "name": "Línea Móvil Intermedia", 
-          "price": 10.00, 
-          "quantity": 0, 
-          "icon": "FaMobileAlt",
-          "features": [
-            {"id": "detail-1", "detail": "Datos y minutos ilimitados."},
-            {"id": "detail-2", "detail": "Roaming en la Zona 1 Europa y Reino Unido."}
+        "id": "estandar-lineas-mobiles",
+        "name": "Líneas móviles",
+        "icon": "FaMobile",
+        "description": "1 Línea móvil Básica incluída. Puedes añadir las líneas que necesites",
+        "options": {
+          "lessThan20": [
+            {
+              "id": "basic-mobile-line",
+              "name": "Línea Móvil Básica",
+              "category": "Líneas Móviles:",
+              "price": 5.00,
+              "quantity": 0,
+              "icon": "FaMobile",
+              "features": [
+                {"id": "detail-1", "detail": "10GB de Datos y minutos ilimitados. Velocidad Alta 5G."},
+                {"id": "detail-2", "detail": "Roaming en la Zona 1 Europa y Reino Unido."},
+                {"id": "detail-3", "detail": "500 min en llamadas internacionales Zona 1."}
+              ]
+            },
+            {
+              "id": "intermediate-mobile-line",
+              "name": "Línea Móvil Intermedia",
+              "category": "Líneas Móviles:",
+              "price": 10.00,
+              "quantity": 0,
+              "icon": "FaMobileAlt",
+              "features": [
+                {"id": "detail-1", "detail": "20GB de Datos y minutos ilimitados. Velocidad Máxima 5G"},
+                {"id": "detail-2", "detail": "Roaming en la Zona 1 Europa y Reino Unido."}
+              ]
+            }
+          ],
+          "moreThan20": [
+            {
+              "id": "business-mobile-line",
+              "name": "Línea Móvil Empresa",
+              "category": "Líneas Móviles:",
+              "price": 8.00,
+              "quantity": 0,
+              "icon": "FaMobile",
+              "features": [
+                {"id": "detail-1", "detail": "15GB de Datos y minutos ilimitados. Velocidad Alta 5G."},
+                {"id": "detail-2", "detail": "Roaming en la Zona 1 Europa y Reino Unido."}
+              ]
+            },
+            {
+              "id": "corporate-mobile-line",
+              "name": "Línea Móvil Corporativa",
+              "category": "Líneas Móviles:",
+              "price": 15.00,
+              "quantity": 0,
+              "icon": "FaMobileAlt",
+              "features": [
+                {"id": "detail-1", "detail": "30GB de Datos y minutos ilimitados. Velocidad Máxima 5G"},
+                {"id": "detail-2", "detail": "Roaming en la Zona 1 Europa y Reino Unido."}
+              ]
+            },
+            {
+              "id": "premium-mobile-line",
+              "name": "Línea Móvil Premium",
+              "category": "Líneas Móviles:",
+              "price": 18.00,
+              "quantity": 0,
+              "icon": "FaMobileAlt",
+              "features": [
+                {"id": "detail-1", "detail": "Datos ilimitados y Velocidad Máxima 5G"},
+                {"id": "detail-2", "detail": "Minutos ilimitados."},
+                {"id": "detail-3", "detail": "Roaming en la Zona 1 Europa y Reino Unido."}
+              ]
+            },
+            {
+              "id": "executive-mobile-line",
+              "name": "Línea Móvil Ejecutiva",
+              "category": "Líneas Móviles:",
+              "price": 22.00,
+              "quantity": 0,
+              "icon": "FaMobileAlt",
+              "features": [
+                {"id": "detail-1", "detail": "50GB de Datos y minutos ilimitados. Velocidad Ultra 5G."},
+                {"id": "detail-2", "detail": "Soporte prioritario 24/7."}
+              ]
+            }
           ]
         }
-      ]
-    },
+      },
     "centralita": {
       "id": "estandar-centralita", 
-      "name": "Centralita Avanzada", 
+      "name": "Centralita Avanzada",  
+      "category": "Centralita:",
+      "description": "Incluída en tu pack", 
       "price": 5.00, 
       "selected": false, 
       "icon": "FaExchangeAlt",
@@ -75,11 +135,13 @@
     "mobileDevices": {
       "id": "estandar-despositivos-mobiles", 
       "name": "Dispositivos Móviles",
+      "icon": "FaMobile",
       "description": "Puedes añadir los dispositivos que necesites", 
       "options": [
         {
           "id": "device-galaxy-a25",
           "name": "Samsung Galaxy A25 5G 128GB",
+          "category": "Dispositivos:",
           "brand": "Samsung",
           "model": "Galaxy A25 Black",
           "price": 5.17,
@@ -93,6 +155,7 @@
         {
           "id": "device-tcl-40",
           "name": "TCL 40 SE 128GB",
+          "category": "Dispositivos:",
           "brand": "TLC",
           "model": "40 SE 128GB Black",
           "price": 20.99,
@@ -106,6 +169,7 @@
         {
           "id": "device-realme-c61",
           "name": "Realme C61 4G 6+256GB",
+          "category": "Dispositivos:",
           "brand": "Realme",
           "model": "C61 4G 6+256GB Dark Green",
           "price": 10.50,
@@ -119,6 +183,7 @@
         {
           "id": "device-motorola-g75",
           "name": "Motorola G75 5G 256GB",
+          "category": "Dispositivos:",
           "brand": "Motorola",
           "model": "G75 5G 256GB Black",
           "price": 30.75,
@@ -132,6 +197,7 @@
         {
           "id": "device-galaxy-a16",
           "name": "Samsung Galaxy A16 4G 128GB",
+          "category": "Dispositivos:",
           "brand": "Samsung",
           "model": "Galaxy A16 4G 128GB Black",
           "price": 15.60,
@@ -145,6 +211,7 @@
         {
           "id": "device-honor-x6b",
           "name": "Honor X6B",
+          "category": "Dispositivos:",
           "brand": "Honor",
           "model": "X6B",
           "price": 18.25,
@@ -161,11 +228,12 @@
       "id": "estandar-servicios", 
       "name": "Servicios Digitales",
       "description": "Añade servicios que impulsarán tu empresa", 
-
+      "icon": "FaCloud",
       "options": [
         {
           "id": "solution-cloud-backup",
           "name": "Backup en la Nube",
+          "category": "Soluciones:",
           "description": "Servicio de copias de seguridad en la nube con cifrado de extremo a extremo, asegurando la protección de los datos de tu empresa.",
           "price": 9.99,
           "previousPrice": 14.99,
@@ -176,6 +244,7 @@
         {
           "id": "solution-digital-marketing",
           "name": "Marketing Digital",
+          "category": "Soluciones:",
           "description": "Plataforma de marketing digital con gestión de redes sociales, automatización de email y análisis de datos.",
           "price": 19.99,
           "previousPrice": 24.99,
@@ -186,6 +255,7 @@
         {
           "id": "solution-cybersecurity",
           "name": "Ciberseguridad Avanzada",
+          "category": "Soluciones:",
           "description": "Solución integral de ciberseguridad con firewall, protección contra malware y gestión de accesos.",
           "price": 15.50,
           "previousPrice": 20.00,
@@ -196,6 +266,7 @@
         {
           "id": "solution-erp-system",
           "name": "ERP para Pymes",
+          "category": "Soluciones:",
           "description": "Software ERP para la gestión de finanzas, inventario y recursos humanos, optimizando la productividad de tu negocio.",
           "price": 29.99,
           "previousPrice": 39.99,

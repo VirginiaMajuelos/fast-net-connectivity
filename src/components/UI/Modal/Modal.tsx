@@ -1,8 +1,11 @@
 import React from 'react';
+import { IoCloseOutline } from 'react-icons/io5';
 
 import styles from './Modal.module.css';
 
+
 interface ModalProps {
+  dataId: string, 
   children: React.ReactNode; 
   isOpen: boolean;           
   onClose: () => void;       
@@ -14,7 +17,10 @@ export const Modal: React.FC<ModalProps> = ({ children, isOpen, onClose }) => {
   return (
     <div className={styles.modalOverlay}>
       <div className={styles.modalContainer}>
-        <button className={styles.closeButton} onClick={onClose}>X</button>
+        <div className={styles.modalHeader}>
+          <p></p>
+          <button className={styles.closeButton} onClick={onClose}><IoCloseOutline /></button>
+        </div>
         <div className={styles.modalContent}>
           {children}  {/* Aquí se renderiza cualquier contenido pasado */}
         </div>

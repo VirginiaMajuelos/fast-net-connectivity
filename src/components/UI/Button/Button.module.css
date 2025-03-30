@@ -1,0 +1,35 @@
+.button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+}
+
+.primary {
+  background-color: var(--color-blue-700);
+  color: white;
+}
+
+.secondary {
+  background-color: var(--color-gray-400);
+  color: white;
+}
+
+.outline {
+  border: 2px solid var(--color-blue-700);
+  background-color: transparent;
+  color: var(--color-blue-700);
+}
+
+.picker {
+  padding: 6px 14px;
+  border: 1px solid var(--color-blue-300);
+  background-color: var(--color-blue-50);
+}
+
+.pickerSelect {
+  padding: 6px 14px;
+  border: 2px solid var(--color-blue-700);
+  background-color: var(--color-blue-100);
+}

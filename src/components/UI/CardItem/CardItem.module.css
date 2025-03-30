@@ -1,7 +1,6 @@
-
 .card {
   padding: 18px;
-  border-radius: 25px;
+  border-radius: 10px;
   height: 500px;
   max-width: 350px;
   min-height: 420px;
@@ -13,7 +12,6 @@
   color: var(--color-blue-800);
 }
 
-
 .card__list {
   text-align: left;
 }
@@ -21,14 +19,12 @@
 .price {
   font-size: 3rem;
   font-weight: 600;
-
 }
 
 .card h2 {
   font-size: 1.750rem;
   margin-bottom: 10px;
   font-weight: 500;
-
 }
 
 .card ul {
@@ -45,14 +41,14 @@
 .iconTextWrapper {
   display: flex;
   align-items: flex-start;
-  justify-content: center; /* Esto asegura que tanto el icono como el texto se alineen en el centro */
-  gap: 7px; /* Espacio entre el icono y el texto */
+  justify-content: center; 
+  gap: 7px; 
   margin: 0.7rem;
 }
 
 .iconTextWrapper svg {
-  font-size: 22px; /* Ajusta el tamaño del icono */
-  color: var(--color-blue-600); /* Puedes cambiar este valor para modificar el color del icono */
+  font-size: 22px;
+  color: var(--color-blue-600);
 }
 
 .button {
@@ -69,6 +65,51 @@
   background-color: var(--color-blue-800);
 }
 
-.card__footer{
-  padding:20px;
+@media (max-width: 768px) {
+  .card {
+    height: auto;
+    min-height: auto;
+    padding: 16px;
+  }
+
+  .price {
+    font-size: 2.5rem;
+  }
+
+  .card h2 {
+    font-size: 1.5rem;
+  }
+
+  .iconTextWrapper {
+    margin: 0.5rem;
+    gap: 5px;
+  }
+
+  .iconTextWrapper svg {
+    font-size: 20px;
+  }
+
+  .button {
+    padding: 10px 16px;
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 12px;
+  }
+
+  .price {
+    font-size: 2rem;
+  }
+
+  .card h2 {
+    font-size: 1.25rem;
+  }
+
+  .button {
+    width: 100%;
+    padding: 10px 0;
+  }
 }

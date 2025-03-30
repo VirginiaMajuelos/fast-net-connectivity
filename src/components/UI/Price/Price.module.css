@@ -1,10 +1,19 @@
 .priceContainer {
   font-size: 1rem;
   font-weight: 400;
-
 }
 
 .price {
   font-size: 2rem;
   font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .priceContainer{
+    font-size: 1rem;
+  }
+
+  .price {
+    font-size: 1.5rem;
+  }
 }

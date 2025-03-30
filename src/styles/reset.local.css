@@ -43,6 +43,7 @@ p {
 /* Espaciado entre secciones */
 section {
   padding: var(--spacing-lg, 32px);
+  margin-bottom: 40px;
 }
 
 /* Enlaces */

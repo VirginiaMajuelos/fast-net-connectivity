@@ -31,18 +31,32 @@
     "title": "Beneficios principales del pack fibra y móvil para empresas",
     "list": [
       {
+        "icon": "FaClock",
+        "title": "Instalación rápida en 24-48h",
+        "description": "Conéctate sin esperas con nuestra instalación sin coste adicional."
+      },
+      {
+        "icon": "FaShieldAlt",
+        "title": "Protección Secure Net",
+        "description": "Mantén tu empresa protegida contra virus y amenazas online."
+      },
+      {
+        "icon": "FaNetworkWired",
         "title": "Máxima conectividad",
         "description": "Fibra óptica de alta velocidad y cobertura móvil nacional e internacional, ideal para mantener a tu equipo siempre conectado."
       },
       {
+        "icon": "FaProjectDiagram",
         "title": "Gestión centralizada",
         "description": "Una plataforma que unifica las comunicaciones internas y externas, sin necesidad de equipos adicionales."
       },
       {
+        "icon": "FaLock",
         "title": "Seguridad avanzada",
         "description": "Protege tus datos empresariales con soluciones integradas que garantizan la tranquilidad de tu negocio."
       },
       {
+        "icon": "FaExchangeAlt",
         "title": "Flexibilidad",
         "description": "Diseña tu tarifa a medida, pagando solo por lo que realmente necesitas."
       }

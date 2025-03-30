@@ -23,7 +23,7 @@ export const TotalPrice: React.FC<TotalPriceProps> = ({ total, openModalId, hand
       <Modal dataId='contactFormModal' isOpen={openModalId === 'contactFormModal'} onClose={handleCloseModal}>
         <h3>Formulario de contacto</h3>
         <ContactForm /> {/* Agrega el formulario aquí */}
-        <button onClick={handleCloseModal} className={styles.button}>Cerrar</button>
+        {/* <button onClick={handleCloseModal} className={styles.button}>Cerrar</button> */}
       </Modal>
     </div>
   );

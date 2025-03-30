@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import Wizard from '../../components/Features/Wizzard/Wizard';
+import { BenefictsConfig } from '../../components/UI/BenefictsConfig/BenefictsConfig';
 import { Logo } from '../../components/UI/Logo/Logo';
 import { TotalPrice } from '../../components/UI/TotalPrice/TotalPrice';
 import { CartProvider, useCart } from '../../context/CartContext';
@@ -31,16 +32,12 @@ const ConfigEstandarContent: React.FC = () => {
   return (
     <section>
       <Logo />
-      <div className={styles.container__header}>
+      <div className={styles.container__title}>
         <h1>Conectividad Avanzada</h1>
         <h2>Personaliza tu tarifa de Fibra y móvil para tu empresa:</h2>
       </div>
       <Wizard />
-      {/* <div className={styles.box}>
-        <p>Centralita</p>
-        <button onClick={() => handleShowModal(litePlan.features.switchboard.options[0].id)}>Añadir</button>
-      </div> */}
-
+      <BenefictsConfig />
 
       
       <TotalPrice total={totalPrice} openModalId={openModalId} 

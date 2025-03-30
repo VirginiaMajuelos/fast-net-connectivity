@@ -7,10 +7,23 @@
   gap: 1rem; /* Espacio entre las tarjetas y el banner */
 }
 
+.container__section h2{
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: var(--color-blue-800)
+}
+
 .container__plans {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 1rem; /* Espacio entre las tarjetas */
+}
+
+
+@media (max-width: 768px) {
+  .container__plans {
+    flex-direction: column; /* En dispositivos pequeños, las tarjetas se apilan verticalmente */
+  }
 }

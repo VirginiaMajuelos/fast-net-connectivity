@@ -1,72 +1,118 @@
-/* VodafoneRedInfinity.module.css */
+/* Benefits.module.css - Mejora de diseño y responsive */
+
 .container {
-  padding: 30px;
+  width: 100%;
+  padding: 4rem 2rem;
+  color: var(--color-blue-800);
+  text-align: justify;
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 3rem;
+}
+
+.title {
+  font-size: 2.2rem;
+  font-weight: bold;
 }
 
 .features {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  width: 100%;
+  max-width: 900px;
 }
 
 .featureCard {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  width: 200px;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   text-align: center;
+  color: #333;
+  transition: transform 0.3s ease-in-out;
+}
+
+.featureCard:hover {
+  transform: translateY(-5px);
 }
 
 .icon {
-  font-size: 2rem;
-  color: #0073e6;
-  margin-bottom: 15px;
+  font-size: 2.5rem;
+  color: var(--color-blue-700);
+  margin-bottom: 1rem;
 }
 
 .featureCard h3 {
-  font-size: 1.2rem;
-  color: #333;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
 }
 
 .featureCard p {
   font-size: 1rem;
-  color: #777;
+  color: #555;
 }
 
 .description {
-  margin-top: 30px;
+  max-width: 900px;
   text-align: left;
+  color: var(--color-blue-800);
 }
 
-.description h2 {
+.description h2,
+.description h3 {
   font-size: 1.8rem;
-  color: #333;
+  font-weight: bold;
+  color: var(--color-blue-800);
+  margin-bottom: 1rem;
 }
 
 .description p {
   font-size: 1rem;
-  color: #555;
   line-height: 1.6;
+  margin-bottom: 1rem;
 }
 
-.description ul {
-  list-style-type: none;
-  padding-left: 0;
+.list__bullets {
+  list-style: none;
+  padding: 0;
 }
 
-.description li {
+.list__bullets li {
   font-size: 1rem;
-  margin-bottom: 10px;
+  /* display: flex;
+  align-items: center; */
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.list__bullets li svg{
+  margin-right: 0.5rem;
 }
 
 .price {
   font-size: 1.5rem;
-  color: #333;
   font-weight: bold;
-  margin-top: 20px;
+  color: var(--color-green-400);
+  margin-top: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 3rem 1.5rem;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  .description {
+    text-align: center;
+  }
 }

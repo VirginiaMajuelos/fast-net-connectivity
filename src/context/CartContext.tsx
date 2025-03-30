@@ -14,33 +14,31 @@ export const useCart = () => {
 };
 
 export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const initialItems: CartItem[] = [
-    { id: 'linea-fija', name: 'Línea fija incluida', price: 0, quantity: 1 },
-    { id: 'fibra', name: 'Fibra incluida', price: litePlan.basePrice, quantity: 1 },
-    { id: 'centralita', name: 'Centralita incluida', price: 0, quantity: 1 },
-  ];
-
-  const [cart, setCart] = useState<CartState>({
-    items: initialItems,
-    totalPrice: litePlan.basePrice, // La fibra ya está incluida
-  });
-
+  const [cart, setCart] =useState<CartState>({ items: [], totalPrice: 42});
   const [fiberPrice, setFiberPrice] = useState(0);
 
+
+  // const updateFiberPrice = (price: number) => {
+  //   setCart((prevCart) => ({
+  //     ...prevCart,
+  //     totalPrice: litePlan.basePrice + price, 
+  //   }));
+  // };
+  
   const updateFiberPrice = (price: number) => {
     setFiberPrice(price);
     setCart((prevCart) => ({
       ...prevCart,
-      totalPrice:
-        litePlan.basePrice +
-        price +
-        prevCart.items.reduce((acc, item) => acc + item.price * item.quantity, 0),
+      totalPrice: litePlan.basePrice + price + prevCart.items.reduce((acc, item) => acc + item.price * item.quantity, 0),
     }));
   };
-
+  
   const addProduct = (product: CartItem) => {
+    //Actualizar el carrito
     setCart((prevCart) => {
+      //Comprobamos si existe el producto
       const existingItem = prevCart.items.find((item) => item.id === product.id);
+      //si existe agregamos 1 cantidad
       const updatedItems = existingItem
         ? prevCart.items.map((item) =>
           item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
@@ -49,13 +47,14 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
       return { ...prevCart, items: updatedItems };
     });
   };
+  
 
   const removeProduct = (id: string) => {
     setCart((prevCart) => {
       const updateItems = prevCart.items
-        .map((item) => (item.id === id ? { ...item, quantity: item.quantity - 1 } : item))
+        .map((item) => item.id === id ? {...item, quantity: item.quantity -1 } : item )
         .filter((item) => item.quantity > 0);
-      return { ...prevCart, items: updateItems };
+      return { ...prevCart, items: updateItems};
     });
   };
 
@@ -63,14 +62,28 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
     return cart.items.reduce((total, item) => total + item.price * item.quantity, cart.totalPrice);
   };
 
-  const getSelectedProducts = () => {
-    return cart.items.filter((item) => item.quantity > 0);
+  const getGroupedProducts = () => {
+    const groupedItems: Record<string, CartItem[]> = cart.items.reduce((acc, item) => {
+      const category = item.category || 'Otros'; // Evitamos undefined
+  
+      if (!acc[category]) {
+        acc[category] = [];
+      }
+  
+      acc[category].push(item);
+      return acc;
+    }, {} as Record<string, CartItem[]>);
+  
+    return Object.entries(groupedItems).map(([category, items]) => ({
+      category,
+      items,
+    }));
   };
+  
+
 
   return (
-    <CartContext.Provider
-      value={{ cart, fiberPrice, updateFiberPrice, getTotalPrice, addProduct, removeProduct, getSelectedProducts }}
-    >
+    <CartContext.Provider value={{ cart, fiberPrice, updateFiberPrice, getTotalPrice, addProduct, removeProduct, getGroupedProducts }}>
       {children}
     </CartContext.Provider>
   );

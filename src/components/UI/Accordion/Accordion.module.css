@@ -1,9 +1,10 @@
 .accordion {
   border-radius: 15px;
   background: var(--color-blue-50);
-  color: var(--basic-dark);
+  color: var(--color-blue-800);
   margin: 1rem;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1607843137);
+  text-align: left;
 }
 
 .accordion__header {

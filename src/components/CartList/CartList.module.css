@@ -2,20 +2,29 @@
 
 .divisor{
   border-bottom: 1px solid var(--color-blue-700);
-  margin: 15px;
+  margin-top: 15px;
 }
 
 .divisor h2{
   margin-bottom: 40px;
+  
 }
 .item__list{
   display: flex;
   justify-content: space-between;
   align-content: center;
+  margin-top: 0.750rem;
 }
 
 .price{
   font-size: 1.75rem;
   font-weight: 500;
   margin: 0;
+}
+
+.container__name {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 0;
 }

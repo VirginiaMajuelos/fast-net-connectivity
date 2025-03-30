@@ -4,6 +4,7 @@ import { PiCheckLight } from 'react-icons/pi';
 
 import { Tariff } from '../../../services/data/types';
 import styles from '../../../styles/general.module.css';
+import { Button } from '../../UI/Button/Button';
 import stylesFiber from './Fiber.module.css';
 
 export const Fiber: React.FC<{ litePlan: Tariff; onFiberSelect: (price: number) => void }> = ({ litePlan, onFiberSelect }) => {
@@ -20,19 +21,21 @@ export const Fiber: React.FC<{ litePlan: Tariff; onFiberSelect: (price: number) 
     <article>
       <div className={styles.container__title}>
         <FaWifi size={32}/>
-        <h3>Fibra Óptica + Línea Fija</h3>
+        <h3>{fiber.name}</h3>
+        <p className={styles.description}>{fiber.description}</p>
       </div>
       <div className={styles.box__fibra}>
         <p className={stylesFiber.description}>Velocidad a elegir entre 600 Mbps o 1Gbps. Router WiFi 6.</p>
         <ul className={stylesFiber.container__picker}>
           {fiber.options.map((item) => (
             <li key={item.id}>
-              <button
-                className={fiberSelect === item.id ? `${stylesFiber.btn__pickerSelect}` : `${stylesFiber.btn__picker}`}
-                onClick={() => handleFiber(item.id, item.price)}  // Al seleccionar una fibra, actualizamos el precio global
+              <Button
+                variant='picker'
+                isSelected={fiberSelect === item.id}  
+                onClick={() => handleFiber(item.id, item.price)}
               >
                 {item.name}
-              </button>
+              </Button>
             </li>
           ))}
         </ul>

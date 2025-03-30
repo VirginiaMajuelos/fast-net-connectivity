@@ -1,20 +1,21 @@
 .banner {
-  width: 720px; /* Igual al ancho de las dos tarjetas */
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /* background: linear-gradient(185deg, var(--color-blue-800), var(--color-blue-500)); */
   background-color: var(--color-blue-50);
   padding: 20px;
   border-radius: 25px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  margin: 10px auto; /* Asegura que se centre */
+  margin: 20px;
   color: var(--color-blue-800);
   text-align: left;
-  gap: 1rem;
+  gap: 2rem;
+  /* border: 1px solid var(--color-blue-800) */
 }
 
 .bannerContent{
-  max-width: 60%;
+  /* max-width: 80%; */
   color: var(--color-blue-800);
   display: flex;
   flex-direction: row;
@@ -29,7 +30,7 @@
 .bannerTitle {
   font-size: 1.5rem;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 0;
 }
 
 .bannerDescription {
@@ -42,16 +43,34 @@
   flex-direction: column;
 }
 
-.button {
-  padding: 12px 20px;
-  background-color: var(--color-blue-700);
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
 
-.button:hover {
-  background-color: var(--color-blue-800);
-}
 
+@media (max-width: 768px) {
+  .banner {
+    width: 100%; /* Ajusta el tamaño del banner en pantallas más pequeñas */
+    flex-direction: column; /* El contenido del banner se apila en vertical */
+    align-items: center;
+    gap: 1.5rem; /* Agrega más espacio entre los elementos */
+  }
+
+  .bannerContent {
+    max-width: 100%; /* El texto ocupa todo el ancho disponible */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .bannerImage {
+    width: 100%; /* Hace que la imagen (o el link) ocupe todo el ancho disponible */
+  }
+
+  .bannerTitle {
+    font-size: 1.25rem; /* Ajusta el tamaño del título */
+  }
+
+  .bannerDescription {
+    font-size: 0.875rem; /* Ajusta el tamaño de la descripción */
+  }
+
+
+}

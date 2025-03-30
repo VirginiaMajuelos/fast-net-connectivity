@@ -12,6 +12,8 @@ export const CardCentralita: React.FC<{ litePlan: Tariff}> = ({ litePlan }) => {
       <div className={styles.container__title}>
         <FaHeadphones size={32}/>
         <h3>{centralita.name}</h3>
+        <p className={styles.description}>{litePlan.features.centralita.description}</p>
+
       </div>
       <div className={styles.box__fibra}>        
         <ul>
