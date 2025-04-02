@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { ContactForm } from '../../Features/ContactForm/ContactForm';
+import { Button } from '../Button/Button';
 import { Modal } from '../Modal/Modal';
 import styles from './TotalPrice.module.css';
 
@@ -15,9 +16,8 @@ export const TotalPrice: React.FC<TotalPriceProps> = ({ total, openModalId, hand
   return (
     <div className={styles.container}>
       <p><span className={styles.price}>{total.toFixed(2)}</span>€/mes</p>
-      <button className={styles.button} onClick={() => handleShowModal('contactFormModal')}>
-        Me interesa
-      </button>
+
+      <Button variant='primary' onClick={() => handleShowModal('contactFormModal')}>Me interesa</Button>
 
       {/* Renderiza la Modal aquí */}
       <Modal dataId='contactFormModal' isOpen={openModalId === 'contactFormModal'} onClose={handleCloseModal}>

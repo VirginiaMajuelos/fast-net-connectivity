@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { useWizard } from '../../../context/WizardContext';
+import { Button } from '../../UI/Button/Button';
 import { ProgressWizard } from './ProgressWizard/ProgressWizard';
 import Step1 from './Steps/Step1';
 import Step2 from './Steps/Step2';
@@ -25,10 +26,11 @@ const Wizard: React.FC = () => {
 
       <div className={styles.container__btn}>
         {currentStep > 0 && (
-          <button className={styles.btn__wizard} onClick={goPrevPage}>Atrás</button>
+          <Button variant='picker' onClick={goPrevPage}>Atrás</Button>
         )}
         {currentStep < steps.length - 1 && (
-          <button className={styles.btn__wizard} onClick={goNextPage}>Siguiente</button>
+          <Button variant='picker' onClick={goNextPage}>Siguiente</Button>
+
         )}
       </div>
     </div>

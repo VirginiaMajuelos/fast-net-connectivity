@@ -11,7 +11,6 @@ const Step1: React.FC<WizardTypes> = () => {
     <div className={styles.step}>
       {/* Usamos el contexto para actualizar el precio global de la fibra */}
       <Fiber litePlan={litePlan} onFiberSelect={updateFiberPrice} />
-      {/* <button className={styles.btn__wizard} onClick={goNextPage}>Siguiente</button> */}
     </div>
   );
 };

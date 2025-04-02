@@ -3,6 +3,7 @@ import { FaChartLine, FaDigitalTachograph, FaExchangeAlt, FaMobile, FaMobileAlt,
 
 import { Tariff } from '../../../services/data/types';
 import { ContactForm } from '../../Features/ContactForm/ContactForm';
+import { Button } from '../Button/Button';
 import { Modal } from '../Modal/Modal';
 import styles from './CardItem.module.css';
 
@@ -40,7 +41,8 @@ export const CardItem: React.FC<{ plan: Tariff }> = ({ plan }) => {
         <p className={styles.price__container}>
           Desde <span className={styles.price}>{plan.basePrice}</span>€/mes
         </p>
-        <button onClick={() => handleShowModal('contactFormModal')} className={styles.button}>Me interesa</button>
+        <Button variant='primary' onClick={() => handleShowModal('contactFormModal')}>Me interesa</Button>
+        
       </div>
       <Modal dataId='me-interesa' isOpen={openModalId === 'contactFormModal'} onClose={handleCloseModal}>
         <ContactForm />

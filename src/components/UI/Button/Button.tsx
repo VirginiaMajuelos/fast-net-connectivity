@@ -20,7 +20,15 @@ export const Button: React.FC<ButtonProps> = ({
   className = '',
   ...props
 }) => {
-  const buttonClasses = `${styles.button} ${styles[variant]} ${styles[size]} ${className} ${isSelected ? styles.pickerSelect : styles.picker}`;
+  const buttonClasses = `
+  ${styles.button} 
+  ${styles[variant]} 
+  ${styles[size]} 
+  ${className} 
+  ${variant === 'picker' && isSelected ? styles.pickerSelect : ''} 
+  ${variant === 'picker' && !isSelected ? styles.picker : ''}
+`.trim();
+
 
   return (
     <Component className={buttonClasses} {...props}>

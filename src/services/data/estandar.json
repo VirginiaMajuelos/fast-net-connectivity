@@ -15,6 +15,7 @@
     "fiber": {
       "name": "Fibra Óptica + Línea Fija", 
       "description": "Incluídas en tu pack.", 
+      "category": "Fibra Óptica + Línea Fija",
       "icon": "FaWifi",
       "features": [
         {"id": "detail-1", "detail": "Télefono fijo y cuota de línea"},
@@ -29,12 +30,14 @@
     "landline": {
       "included": true,
       "description": "1 línea fija incluida",
+      "category": "Línea Fija",
       "previousPrice": 5.00,
       "icon": "FaPhone"
     },
     "mobileLines": {
         "id": "estandar-lineas-mobiles",
         "name": "Líneas móviles",
+        "category": "Líneas móviles",
         "icon": "FaMobile",
         "description": "1 Línea móvil Básica incluída. Puedes añadir las líneas que necesites",
         "options": {

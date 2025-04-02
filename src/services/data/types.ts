@@ -2,11 +2,12 @@ export interface Tariff {
   id: string;
   name: string;
   description: string;
+  category?: string;
   longDescription?: string;
   basePrice: number;
   previousPrice: number;
   basicFeatures: Array<{
-    id:string;
+    id: string;
     name: string;
     icon: string;
   }>;
@@ -15,6 +16,7 @@ export interface Tariff {
       name: string;
       description: string;
       category: string;
+      icon: string;
       features: Array<{
         id: string;
         detail: string;
@@ -25,37 +27,40 @@ export interface Tariff {
         price: number;
         selected?: boolean;
         icon: string;
+        category: string;
       }>;
     };
     landline: {
       included: boolean;
-      description: string;    
-      previousPrice: number;
+      description: string;
+      previousPrice?: number;
       icon: string;
     };
     centralita: {
+      id: string;
+      name: string;
+      description: string;
+      price: number;
+      selected?: boolean;
+      icon: string;
+      category: string;
+      features: Array<{
         id: string;
-        name: string;
-        description: string;
-        price: number;
-        selected?: boolean;
-        icon: string;
-        features: Array<{
-          id: string;
-          detail: string;
-        }>;
+        detail: string;
+      }>;
     };
     mobileLines: {
       id: string;
-      name: string; 
+      name: string;
       description: string;
+      icon: string;
       options: {
         lessThan20: Array<{
           id: string;
           name: string;
           price: number;
           quantity: number;
-          category: string,
+          category: string;
           icon: string;
           features: Array<{
             id: string;
@@ -66,7 +71,7 @@ export interface Tariff {
           id: string;
           name: string;
           price: number;
-          category: string,
+          category: string;
           quantity: number;
           icon: string;
           features: Array<{
@@ -75,13 +80,12 @@ export interface Tariff {
           }>;
         }>;
       };
-      
     };
-    
-    mobileDevices?: { 
+    mobileDevices?: {
       id: string;
-      name: string; 
+      name: string;
       description: string;
+      icon: string;
       options: Array<{
         id: string;
         brand: string;
@@ -96,10 +100,11 @@ export interface Tariff {
         icon: string;
       }>;
     };
-    solutions?: {  
+    solutions?: {
       id: string;
-      name: string; 
+      name: string;
       description: string;
+      icon: string;
       options: Array<{
         id: string;
         name: string;
@@ -114,17 +119,17 @@ export interface Tariff {
   };
 }
 
-export type CartItem = { 
-  id: string; 
-  name: string; 
+export type CartItem = {
+  id: string;
+  name: string;
   icon: string;
-  category: string,
-  price: number; 
+  category: string;
+  price: number;
   quantity: number;
 };
 
-export type CartState = { 
-  items: CartItem[]; 
+export type CartState = {
+  items: CartItem[];
   totalPrice: number;
 };
 
@@ -134,19 +139,17 @@ export type CartContextType = {
   addProduct: (product: CartItem) => void;
   removeProduct: (id: string) => void;
   getTotalPrice: () => number;
-  getGroupedProducts: () => { category: string; items: CartItem[] }[]; 
+  getGroupedProducts: () => { category: string; items: CartItem[] }[];
   fiberPrice: number;
 };
-
 
 export interface ProgressWizardProps {
   currentStep: number;
   totalSteps: number;
 }
 
-
 export type Faq = {
-  id: number, 
-  title: string, 
-  content: string, 
-}
+  id: number;
+  title: string;
+  content: string;
+};

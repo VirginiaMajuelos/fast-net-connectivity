@@ -8,7 +8,6 @@ const Step2: React.FC<WizardTypes> = () => {
   return (
     <div >
       <CardProductsLines litePlan={litePlan}/>
-      {/* <button onClick={() => handleShowModal(litePlan.features.mobileLines.options[0].id)}>Añadir Lineas</button> */}
     </div>
   );
 };
