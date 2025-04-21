@@ -9,7 +9,6 @@ const AppRouter: React.FC = () => {
     <Routes>
       <Route path='/' element={<Home />} />
       <Route path='/configura-tarifa' element={<ConfigEstandar />} />
-      
     </Routes>
   );
 };

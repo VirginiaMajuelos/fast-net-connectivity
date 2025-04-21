@@ -54,6 +54,7 @@ export interface Tariff {
       name: string;
       description: string;
       icon: string;
+      category: string;
       options: {
         lessThan20: Array<{
           id: string;
@@ -94,6 +95,7 @@ export interface Tariff {
         img: string;
         previousPrice: number;
         price: number;
+        category: string;
         quantity: number;
         installment24: string;
         installment36: string;
@@ -110,6 +112,7 @@ export interface Tariff {
         name: string;
         description: string;
         price: number;
+        category: string;
         previousPrice: number;
         quantity: number;
         pricePerLic: string;

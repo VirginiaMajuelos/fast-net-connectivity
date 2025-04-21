@@ -40,7 +40,7 @@ export default tseslint.config(
       }],
       // Reglas específicas de tu proyecto
       'react-refresh/only-export-components': 'off',  // Desactiva la regla que requiere exportar solo componentes
-
+      'no-inline-comments': 'error',
       // **Reglas de estilo según Airbnb**
       
       // 1. Comillas simples

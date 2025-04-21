@@ -1,14 +1,13 @@
 import React from 'react';
 import { FaChartLine, FaHeadphones, FaMobile, FaMobileAlt, FaPhone, FaWifi } from 'react-icons/fa';
 
-import { useCart } from '../../context/CartContext';
+import { useCart } from '../../../context/CartContext';
 import style from './CartList.module.css';
 
 
 export const CartList: React.FC = () => {
   const { getGroupedProducts, getTotalPrice } = useCart();
   const groupedProducts = getGroupedProducts();
-  console.log(groupedProducts);
   const total = getTotalPrice();
 
 
@@ -23,11 +22,10 @@ export const CartList: React.FC = () => {
     <div className={style.container__cartList}>
       <h2>Resumen de la tarifa configurada</h2>
       <ul>
-        {/* Mostrar Fibra, Línea Fija y Centralita siempre */}
         <li>
           <div className={` ${style.divisor} ${style.container__name}`}>
             <FaWifi />
-            <h3 className={style.item__list} ><strong>Fibra Óptica</strong></h3>
+            <p className={style.item__nameList} ><strong>Fibra Óptica</strong></p>
           </div>
           <div  className={style.item__list}>
             <p>1 Fibra Velocidad 600Mbps con WiFi 6</p>
@@ -37,7 +35,7 @@ export const CartList: React.FC = () => {
         <li>
           <div className={` ${style.divisor} ${style.container__name}`}>
             <FaPhone />
-            <h3 className={style.item__list} ><strong>Línea Fija</strong></h3>
+            <p className={style.item__nameList}><strong>Línea Fija</strong></p>
           </div>
           <div  className={style.item__list}>
             <p>1 Línea fija con llamadas ilimitadas</p>
@@ -47,7 +45,7 @@ export const CartList: React.FC = () => {
         <li>
           <div className={` ${style.divisor} ${style.container__name}`}>
             <FaHeadphones />
-            <h3 className={style.item__list} ><strong>Centralita</strong></h3>
+            <p className={style.item__nameList}><strong>Centralita</strong></p>
           </div>
           <div  className={style.item__list}>
             <p>1 Centralita Avanzada</p>
@@ -61,9 +59,9 @@ export const CartList: React.FC = () => {
           <li key={category}>
             <div className={` ${style.divisor} ${style.container__name}`}>
               {iconMap[category]} 
-              <h3 className={style.item__list}>
+              <p className={style.item__nameList}>
                 <strong>{category}</strong>
-              </h3>
+              </p>
             </div>
 
             {items.map((product) => (

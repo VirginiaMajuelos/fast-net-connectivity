@@ -1,6 +1,5 @@
 .btn__counter{
   cursor:pointer;
-  /* font-size: small; */
   background-color: var(--color-blue-300);
   border-radius: 0.375rem;
   display: flex;

@@ -8,9 +8,8 @@ export const ContactForm: React.FC = () => {
   const [phone, setPhone] = useState('');
   const [privacyAccepted, setPrivacyAccepted] = useState(false);
   const [submitted, setSubmitted] = useState(false);
-  const [loading, setLoading] = useState(false); // Estado para el loader
+  const [loading, setLoading] = useState(false); 
 
-  // Estados de error
   const [nameError, setNameError] = useState('');
   const [phoneError, setPhoneError] = useState('');
   const [privacyError, setPrivacyError] = useState('');
@@ -25,7 +24,7 @@ export const ContactForm: React.FC = () => {
       setNameError('');
     }
 
-    const phonePattern = /^[6-9]\d{8}$/; // Formato correcto para números en España
+    const phonePattern = /^[6-9]\d{8}$/; 
     if (!phonePattern.test(phone)) {
       setPhoneError('Introduce un número de teléfono válido.');
       isValid = false;
@@ -47,21 +46,21 @@ export const ContactForm: React.FC = () => {
     e.preventDefault();
     if (!validateForm()) return;
 
-    setLoading(true); // Activamos el loader
+    setLoading(true); 
 
     setTimeout(() => {
       setLoading(false);
       setSubmitted(true);
-    }, 2000); // Simulamos una espera de 2 segundos
+    }, 2000); 
   };
 
   return (
     <div className={styles.container}>
       {submitted ? (
         <div className={styles.thankYouPage}>
-          <h2>¡Gracias por tu confianza!</h2>
-          <p>Hemos recibido tu solicitud y pronto te contactaremos.</p>
-          <p>Si lo prefieres, también puedes llamarnos al <strong>900 745 443</strong>.</p>
+          <p className={styles.title}>¡Gracias por tu confianza!</p>
+          <p className={styles.text}>Hemos recibido tu solicitud y pronto te contactaremos.</p>
+          <p className={styles.text}>Si lo prefieres, también puedes llamarnos al <strong>900 745 443</strong>.</p>
         </div>
       ) : (
         <form onSubmit={handleSubmit} className={styles.contactForm}>

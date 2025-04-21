@@ -42,5 +42,5 @@
 }
 
 .step.active {
-  background-color:var(--color-blue-600) /* Verde cuando el paso está activo */
+  background-color:var(--color-blue-600);
 }

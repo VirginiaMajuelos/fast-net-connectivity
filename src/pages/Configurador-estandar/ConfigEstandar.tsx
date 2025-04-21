@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
+import { BenefictsConfig } from '../../components/Features/BenefictsConfig/BenefictsConfig';
+import { TotalPrice } from '../../components/Features/TotalPrice/TotalPrice';
 import Wizard from '../../components/Features/Wizzard/Wizard';
-import { BenefictsConfig } from '../../components/UI/BenefictsConfig/BenefictsConfig';
 import { Logo } from '../../components/UI/Logo/Logo';
-import { TotalPrice } from '../../components/UI/TotalPrice/TotalPrice';
 import { CartProvider, useCart } from '../../context/CartContext';
 import { WizardProvider } from '../../context/WizardContext';
 import styles from './ConfigEstandar.module.css';

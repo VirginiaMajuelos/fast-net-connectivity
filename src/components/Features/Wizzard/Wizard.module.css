@@ -1,6 +1,5 @@
 .container__wizard {
-  /* width: 100%; */
-  height: fit-content;
+  height: auto;
   min-height: 500px;
   border-radius: 25px;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1607843137);
@@ -14,10 +13,12 @@
   color: var(--color-blue-800);
   font-size: 1.1rem;
   line-height: 1.6;
+  overflow: hidden;
 }
 
 @media (max-width: 768px) {
   .container__wizard{
+    min-height: 60vh;
     padding: 20px;
   }
 
@@ -46,8 +47,6 @@
   font-weight: bold;
 }
 
-
-
 .progressBar {
   display: flex;
   justify-content: space-between;
@@ -70,6 +69,6 @@
 }
 
 .progressStep.active {
-  background-color: #4CAF50; /* Verde cuando está activo */
+  background-color: #4CAF50; 
   color: white;
 }

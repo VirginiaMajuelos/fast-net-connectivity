@@ -16,14 +16,6 @@ export const useCart = () => {
 export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [cart, setCart] =useState<CartState>({ items: [], totalPrice: 42});
   const [fiberPrice, setFiberPrice] = useState(0);
-
-
-  // const updateFiberPrice = (price: number) => {
-  //   setCart((prevCart) => ({
-  //     ...prevCart,
-  //     totalPrice: litePlan.basePrice + price, 
-  //   }));
-  // };
   
   const updateFiberPrice = (price: number) => {
     setFiberPrice(price);
@@ -34,11 +26,8 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
   };
   
   const addProduct = (product: CartItem) => {
-    //Actualizar el carrito
     setCart((prevCart) => {
-      //Comprobamos si existe el producto
       const existingItem = prevCart.items.find((item) => item.id === product.id);
-      //si existe agregamos 1 cantidad
       const updatedItems = existingItem
         ? prevCart.items.map((item) =>
           item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
@@ -64,7 +53,7 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const getGroupedProducts = () => {
     const groupedItems: Record<string, CartItem[]> = cart.items.reduce((acc, item) => {
-      const category = item.category || 'Otros'; // Evitamos undefined
+      const category = item.category || 'Otros'; 
   
       if (!acc[category]) {
         acc[category] = [];

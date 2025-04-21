@@ -6,11 +6,11 @@
   "basePrice": 60.00,
   "previousPrice": 70.00,
   "basicFeatures": [
-    { "name": "Fibra 1 Gbps con Router WiFi 6", "icon": "FaWifi" },
-    { "name": "1 Línea fija incluida", "icon": "FaPhone" },
-    { "name": "Centralita Plus incluida", "icon": "FaExchangeAlt" },
-    { "name": "Líneas móviles con datos ilimitados opcionales", "icon": "FaMobile" },
-    { "name": "Soluciones digitales avanzadas", "icon": "FaChartLine" }
+    { "id":"feature-1", "name": "Fibra 1 Gbps con Router WiFi 6", "icon": "FaWifi" },
+    { "id":"feature-2", "name": "1 Línea fija incluida", "icon": "FaPhone" },
+    { "id":"feature-3", "name": "Centralita Plus incluida", "icon": "FaExchangeAlt" },
+    { "id":"feature-4", "name": "Líneas móviles con datos ilimitados opcionales", "icon": "FaMobile" },
+    { "id":"feature-5","name": "Soluciones digitales avanzadas", "icon": "FaChartLine" }
   ],
   "features": {
     "fiber": {

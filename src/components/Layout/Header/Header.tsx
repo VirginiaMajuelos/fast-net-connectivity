@@ -6,10 +6,10 @@ export const Header: React.FC = () => {
     <header className={styles.header}>
       <div className={styles.header__content}>
         <Logo />
-        <h1 className={styles.header__title}>
+        <h1 className='mb0'>
           Conectividad Avanzada para tu Negocio
         </h1>
-        <p className={styles.header__subtitle}>
+        <p>
           La mejor velocidad y tecnología con nuestras tarifas personalizadas.
         </p>
         <p className={styles.header__priceContainer}>

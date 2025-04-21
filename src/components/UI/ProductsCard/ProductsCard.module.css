@@ -1,29 +1,31 @@
 .container__section {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Asegura que todo quede alineado */
+  align-items: center; 
   justify-content: center;
   padding: 2rem;
-  gap: 1rem; /* Espacio entre las tarjetas y el banner */
+  gap: 1rem; 
 }
 
 .container__section h2{
-  font-size: 2.2rem;
-  font-weight: bold;
   color: var(--color-blue-800)
 }
 
-.container__plans {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem; /* Espacio entre las tarjetas */
+.container__config{
+  width: 100%; 
+  max-width: 740px; 
 }
 
+.container__plans {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 1rem; 
+  width: 100%; 
+  max-width: 740px; 
+}
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .container__plans {
-    flex-direction: column; /* En dispositivos pequeños, las tarjetas se apilan verticalmente */
+    grid-template-columns: 1fr; 
   }
 }

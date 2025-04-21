@@ -1,4 +1,3 @@
-/* BusinessSolutions.module.css */
 
 .container {
   width: 100%;
@@ -51,7 +50,6 @@
   flex-direction: row-reverse;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .solution {
       flex-direction: column;

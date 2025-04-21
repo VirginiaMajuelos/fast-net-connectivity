@@ -1,5 +1,4 @@
 .footer {
-  /* position: absolute; */
   bottom: 0;
   width: 100%;
   background: linear-gradient(to bottom, var(--color-blue-800), var(--color-blue-900));

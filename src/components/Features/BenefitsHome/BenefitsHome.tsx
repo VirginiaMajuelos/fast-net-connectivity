@@ -3,9 +3,8 @@ import { PiCheckLight } from 'react-icons/pi';
 
 
 import benefits from '../../../services/data/benefitsData.json';
-import styles from './Benefits.module.css';
+import styles from './BenefitsHome.module.css';
 
-// Definir un tipo para las claves de 'icons'
 type IconNames = 'FaCogs' | 'FaShieldAlt' | 'FaWifi' | 'FaUserTie';
 
 const icons: Record<IconNames, JSX.Element> = {
@@ -15,10 +14,10 @@ const icons: Record<IconNames, JSX.Element> = {
   FaUserTie: <FaUserTie className={styles.icon} />
 };
 
-export const Benefits: React.FC = () => {
+export const BenefitsHome: React.FC = () => {
   return (
     <div className={styles.container}>
-      <h2 className={styles.title}>{benefits.title}</h2>
+      <h3 className={styles.title}>{benefits.title}</h3>
       <div className={styles.features}>
         {benefits.features.map((feature, index) => (
           <div key={index} className={styles.featureCard}>
@@ -29,7 +28,7 @@ export const Benefits: React.FC = () => {
         ))}
       </div>
       <div className={styles.description}>
-        <h2>{benefits.description.title}</h2>
+        <h3>{benefits.description.title}</h3>
         <p>{benefits.description.text1}</p>
         <p>{benefits.description.text2}</p>
         <h3>{benefits.benefits.title}</h3>
@@ -38,7 +37,6 @@ export const Benefits: React.FC = () => {
             <li key={index}>  <PiCheckLight /><strong>{benefit.title}:</strong> {benefit.description}</li>
           ))}
         </ul>
-        <p className={styles.price}>{benefits.price}</p>
       </div>
     </div>
   );

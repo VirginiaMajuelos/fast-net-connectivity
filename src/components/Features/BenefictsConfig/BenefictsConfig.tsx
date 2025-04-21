@@ -1,7 +1,7 @@
 import { FaClock, FaCogs, FaExchangeAlt, FaGlobe, FaLock, FaMobileAlt, FaNetworkWired, FaProjectDiagram, FaShieldAlt, FaTv, FaUserTie, FaWifi } from 'react-icons/fa';
 
 import BenefictsData from '../../../services/data/benefitsData.json';
-import styles from './BenefictsConfig.module.css'; // Importamos los estilos CSS Modules
+import styles from './BenefictsConfig.module.css';
 
 const iconMap: Record<string, JSX.Element> = {
   FaWifi: <FaWifi className={styles.icon} />,
@@ -21,14 +21,14 @@ const iconMap: Record<string, JSX.Element> = {
 export const BenefictsConfig: React.FC = () => {
   return (
     <section className={styles.container}>
-      <h3 className={styles.title}>{BenefictsData.benefits.title}</h3>
-      <div className={styles.grid}>
+      <h3>{BenefictsData.benefits.title}</h3>
+      <div className={styles.container__cards}>
         {BenefictsData.benefits.list.map((benefit, index) => (
           <div key={index} className={styles.benefitCard}>
             <div>{iconMap[benefit.icon]}</div>
             <div>
               <h4 className={styles.benefitTitle}>{benefit.title}</h4>
-              <p className={styles.benefitDescription}>{benefit.description}</p>
+              <p>{benefit.description}</p>
             </div>
           </div>
         ))}

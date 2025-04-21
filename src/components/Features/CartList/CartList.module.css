@@ -14,6 +14,11 @@
   justify-content: space-between;
   align-content: center;
   margin-top: 0.750rem;
+  text-align: start;
+}
+
+.item__nameList{
+  margin-bottom: 0;
 }
 
 .price{

@@ -1,4 +1,3 @@
-// BusinessSolutions.tsx
 import React from 'react';
 
 import styles from './BusinessSection.module.css';

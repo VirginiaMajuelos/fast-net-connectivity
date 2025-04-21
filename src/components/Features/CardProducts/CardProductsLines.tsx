@@ -4,7 +4,7 @@ import { PiCheckLight } from 'react-icons/pi';
 
 import { useCart } from '../../../context/CartContext';
 import { Tariff } from '../../../services/data/types';
-import styles from '../../../styles/general.module.css';
+import '../../../styles/general.css';
 import { Button } from '../../UI/Button/Button';
 import { CounterButtons } from '../../UI/CounterButtons/CounterButtons';
 import { Price } from '../../UI/Price/Price';
@@ -19,8 +19,6 @@ export const CardProductsLines: React.FC<{ litePlan: Tariff }> = ({ litePlan }) 
     quantity: cart.items.find((item) => item.id === product.id)?.quantity || 0,
   }));
   
-  
-
   const handleShowLines = (type: 'lessThan20' | 'moreThan20') => {
     setShowLines(prevState => prevState === type ? null : type);
   };
@@ -29,12 +27,12 @@ export const CardProductsLines: React.FC<{ litePlan: Tariff }> = ({ litePlan }) 
     <article>
       <FaPhone size={32} />
       <h3>{litePlan.features.mobileLines.name}</h3>
-      {showLines && <p className={styles.description}>{litePlan.features.mobileLines.description}</p> }
+      {showLines && <p className='description'>{litePlan.features.mobileLines.description}</p> }
             
       {!showLines && (
-        <div className={styles.box}>  
-          <p className={styles.description}>¿Cuántas líneas necesitas?</p>
-          <ul className={styles.container__picker}>
+        <div className='box'>  
+          <p className='description'>¿Cuántas líneas necesitas?</p>
+          <ul className='container__picker'>
             <li key='lineas-menos-20'>
               <Button
                 variant='picker'  
@@ -56,19 +54,19 @@ export const CardProductsLines: React.FC<{ litePlan: Tariff }> = ({ litePlan }) 
       )}
 
       {showLines && (
-        <ul className={`${styles.container__box} `}>
+        <ul className='container__box'>
           {productsWithQuantity.map((product) => (
             <li key={product.id}>
-              <div className={`${styles.box} ${product.quantity > 0 ? styles.box__isActive : ''}`}>
-                <div className={styles.container__name}>
-                  <p className={styles.title__card}>{product.name}</p>
+              <div className={`box ${product.quantity > 0 ? 'box-active' : ''}`}>
+                <div className='container__name'>
+                  <p className='title__card'>{product.name}</p>
                 </div>
                 <div>
                   <ul>
                     {product.features?.map((feature) => (
-                      <li key={feature.id} className={styles.container__list}>
+                      <li key={feature.id} className='container__list'>
                         <PiCheckLight />
-                        <p className={styles.description__list}>{feature.detail}</p>
+                        <p className='description__list'>{feature.detail}</p>
                       </li>
                     ))}
                   </ul>
@@ -82,11 +80,8 @@ export const CardProductsLines: React.FC<{ litePlan: Tariff }> = ({ litePlan }) 
               </div>
             </li>
           ))}
-
         </ul>
       )}
-
-
     </article>
   );
 };

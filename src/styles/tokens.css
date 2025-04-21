@@ -1,10 +1,6 @@
-/* Variables de estilo (colores, espaciado, etc.) */
 
-/* Paleta de colores */
 
 :root {
-  /* Colores morados */
-/* Colores azulados */
 --color-blue-50:  #ebf4ff;
 --color-blue-100: #d6e8ff;
 --color-blue-200: #b3d4ff;
@@ -17,32 +13,15 @@
 --color-blue-900: #0d1f45;
 --color-blue-950: #071022;
 
+--color-light-1: #f7f7f7;
+--color-light-2: #dcdcdc;
+--color-light-3: #aaaaaa;
+--color-light-4: #484848;
 
-  /* Colores amarillos */
-  --color-yellow-100: #F6FFD6;
-  --color-yellow-200: #EEFFB3;
-  --color-yellow-300: #E5FE8A;
-  --color-yellow-400: #DDFE67;
-  --color-yellow-500: #D3FE3E;
-  --color-yellow-600: #C7FE01;
-  --color-yellow-700: #93BC01;
-  --color-yellow-800: #647F01;
-  --color-yellow-900: #303D00;
-  --color-yellow-950: #181E00;
-
-  --color-neon: #cdff4f;
-
-  /* Colores para el modo Light */
-  --color-light-1: #f7f7f7;
-  --color-light-2: #dcdcdc;
-  --color-light-3: #aaaaaa;
-  --color-light-4: #484848;
-
-  /* Colores para el modo Dark */
-  --color-dark-1: #0c0a09;
-  --color-dark-2: #1c1c1c;
-  --color-dark-3: #3d3d3d;
-  --color-dark-4: #b6b6b6;
+--color-dark-1: #0c0a09;
+--color-dark-2: #1c1c1c;
+--color-dark-3: #3d3d3d;
+--color-dark-4: #b6b6b6;
 
   /* Colores de texto para el modo Dark */
   --color-primary-dark: var(--color-yellow-600);
@@ -62,11 +41,7 @@
   --font-family-secondary: 'Kanit', sans-serif;
   --font-weight-regular: 400;
   --font-weight-bold: 700;
-  --font-size-xs: 12px;
-  --font-size-sm: 14px;
-  --font-size-md: 16px;
-  --font-size-lg: 18px;
-  --font-size-xl: 24px;
+  --font-height-regular: 1.6;
 
   /* Espaciado */
   --spacing-xs: 4px;
@@ -74,9 +49,46 @@
   --spacing-md: 16px;
   --spacing-lg: 32px;
   --spacing-xl: 64px;
-
+  --margin-bottom: 0;
+  
   /* Otros */
   --border-radius: 8px;
   --box-shadow-light: 0 2px 4px rgba(0, 0, 0, 0.1);
   --box-shadow-dark: 0 2px 4px rgba(0, 0, 0, 0.3);
+
+  /* Tamaños de fuente base */
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-md: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 24px;
+  --font-size-xxl: 32px;
+
+  /* Tamaños responsivos */
+  --font-size-h1: 3rem;   /* 48px */
+  --font-size-h2: 2.5rem; /* 40px */
+  --font-size-h3: 2rem;   /* 32px */
+  --font-size-h4: 1.5rem; /* 24px */
+  --font-size-p: 1.125rem;  /* 18px */
 }
+/* Para Tablet */
+@media (max-width: 1024px) { 
+  :root {
+    --font-size-h1: 2.5rem; /* 40px */
+    --font-size-h2: 2rem;   /* 32px */
+    --font-size-h3: 1.75rem; /* 28px */
+    --font-size-h4: 1.25rem; /* 20px */
+    --font-size-p: 1rem;    /* 18px */
+  }
+}
+
+/* Para Mobile */
+@media (max-width: 480px) { 
+  :root {
+    --font-size-h1: 1.75rem;  /* 32px */
+    --font-size-h2: 1.75rem; /* 28px */
+    --font-size-h3: 1.5rem;  /* 24px */
+    --font-size-h4: 1.125rem; /* 18px */
+  }
+}
+

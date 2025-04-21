@@ -6,10 +6,10 @@
   "basePrice": 42,
   "previousPrice": 50.00,
   "basicFeatures": [
-    {"id":"1", "name": "Fibra 600 Mbps con Router WiFi 6", "icon": "FaWifi" },
-    {"id":"2", "name": "1 Línea fija incluida", "icon": "FaPhone" },
-    {"id":"3", "name": "Opciones de líneas móviles a medida", "icon": "FaMobile" },
-    { "id":"4","name": "Soluciones digitales opcionales", "icon": "FaChartLine" }
+    {"id":"feature-1", "name": "Fibra 600Mbps con Router WiFi 6", "icon": "FaWifi" },
+    {"id":"feature-2", "name": "1 Línea fija incluida", "icon": "FaPhone" },
+    {"id":"feature-3", "name": "Opciones de líneas móviles a medida", "icon": "FaMobile" },
+    { "id":"feature-4","name": "Soluciones digitales opcionales", "icon": "FaChartLine" }
   ],
   "features": {
     "fiber": {
@@ -23,8 +23,8 @@
         {"id": "detail-3","detail": "Alta e instalación gratis"}
       ],
       "options": [
-        { "id": "fiber-600", "name": "Fibra 600 Mbps",  "price": 0, "icon": "FaWifi", "category": "Fibra:"},
-        { "id": "fiber-1gbps", "name": "Fibra 1 Gbps", "price": 15.00, "icon": "FaWifi", "category": "Fibra:" }
+        { "id": "fiber-600", "name": "Fibra 600Mbps",  "price": 0, "icon": "FaWifi", "category": "Fibra:"},
+        { "id": "fiber-1gbps", "name": "Fibra 1Gbps", "price": 15.00, "icon": "FaWifi", "category": "Fibra:" }
       ]
     },
     "landline": {

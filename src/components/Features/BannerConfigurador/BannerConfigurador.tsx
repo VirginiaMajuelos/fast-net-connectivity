@@ -18,13 +18,8 @@ export const BannerConfigurador: React.FC = () => {
           </p>
         </div>
       </div>
-      <div className={styles.bannerImage}>
+      <div className={styles.bannerBtn}>
         <Link to={'/configura-tarifa'}><Button>Configura ahora</Button></Link>
-
-        {/* <img
-          src='https://via.placeholder.com/150' // Reemplaza con una imagen representativa
-          alt='Fibra y Móvil'
-        /> */}
       </div>
     </div>
   );

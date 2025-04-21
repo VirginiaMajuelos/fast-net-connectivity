@@ -1,19 +1,19 @@
-/* Benefits.module.css - Mejora de diseño y responsive */
 
 .container {
   width: 100%;
-  padding: 4rem 2rem;
+  padding: 2rem;
   color: var(--color-blue-800);
-  text-align: justify;
+  text-align:center;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 3rem;
 }
 
-.title {
-  font-size: 2.2rem;
-  font-weight: bold;
+.description{
+  text-align: left;
+  max-width: 900px;
+
 }
 
 .features {
@@ -54,26 +54,6 @@
   color: #555;
 }
 
-.description {
-  max-width: 900px;
-  text-align: left;
-  color: var(--color-blue-800);
-}
-
-.description h2,
-.description h3 {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: var(--color-blue-800);
-  margin-bottom: 1rem;
-}
-
-.description p {
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 1rem;
-}
-
 .list__bullets {
   list-style: none;
   padding: 0;
@@ -81,8 +61,6 @@
 
 .list__bullets li {
   font-size: 1rem;
-  /* display: flex;
-  align-items: center; */
   gap: 1rem;
   margin-bottom: 1rem;
 }
@@ -91,28 +69,17 @@
   margin-right: 0.5rem;
 }
 
-.price {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: var(--color-green-400);
-  margin-top: 1rem;
-}
-
-/* Responsive */
 @media (max-width: 768px) {
   .container {
     padding: 3rem 1.5rem;
   }
 
-  .title {
-    font-size: 1.8rem;
-  }
 
   .features {
     grid-template-columns: 1fr;
   }
 
   .description {
-    text-align: center;
+    text-align: left;
   }
 }
