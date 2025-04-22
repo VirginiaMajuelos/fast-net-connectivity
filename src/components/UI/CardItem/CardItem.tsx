@@ -46,7 +46,7 @@ export const CardItem: React.FC<{ plan: Tariff }> = ({ plan }) => {
         <Button variant='primary' onClick={() => handleShowModal('contactFormModal')}>Me interesa</Button>
         
       </div>
-      <Modal dataId='me-interesa' isOpen={openModalId === 'contactFormModal'} onClose={handleCloseModal}>
+      <Modal data-testid='me-interesa' isOpen={openModalId === 'contactFormModal'} onClose={handleCloseModal}>
         <ContactForm />
       </Modal>
     </div>

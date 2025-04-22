@@ -16,15 +16,17 @@ export const CounterButtons: React.FC<CounterButtonsProps> = ({quantity, onDecre
         className={styles.btn__counter}
         onClick={onDecrease}
         disabled={quantity === 0}
+        aria-label='decrease'
       >
-        <GoDash />
+        <GoDash aria-label='decrease-icon'/>
       </button>
       <div className={styles.counter__quantity}>{quantity}</div>
       <button
         className={styles.btn__counter}
         onClick={onIncrease}
+        aria-label='increment'
       >
-        <GoPlus />
+        <GoPlus aria-label='increment-icon'/>
       </button>
     </div>
   );

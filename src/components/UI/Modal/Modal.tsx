@@ -4,17 +4,17 @@ import { IoCloseOutline } from 'react-icons/io5';
 import styles from './Modal.module.css';
 
 interface ModalProps {
-  dataId: string, 
+  dataId?: string, 
   children: React.ReactNode; 
-  isOpen: boolean;           
-  onClose: () => void;       
+  isOpen?: boolean;           
+  onClose?: () => void;       
 }
 
-export const Modal: React.FC<ModalProps> = ({ children, isOpen, onClose }) => {
+export const Modal: React.FC<ModalProps> = ({ children, isOpen, onClose, dataId }) => {
   if (!isOpen) return null;
 
   return (
-    <div className={styles.modalOverlay}>
+    <div className={styles.modalOverlay} data-testid={dataId}>
       <div className={styles.modalContainer}>
         <div className={styles.modalHeader}>
           <p></p>

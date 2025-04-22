@@ -19,7 +19,8 @@ export const BannerConfigurador: React.FC = () => {
         </div>
       </div>
       <div className={styles.bannerBtn}>
-        <Link to={'/configura-tarifa'}><Button>Configura ahora</Button></Link>
+        <Button as={Link} to='/configura-tarifa'>Configura ahora</Button>
+
       </div>
     </div>
   );

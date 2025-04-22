@@ -19,7 +19,7 @@ export const Accordion: React.FC<AccordionProps> = ({ title, children }) => {
     <div className={styles.accordion}>
       <div className={styles.accordion__header} onClick={handleToggle}>
         <p className={styles.accordion__title}>{title}</p>
-        <AiOutlineDown
+        <AiOutlineDown aria-label='outline-down-icon'
           className={`${styles.accordion__icon} ${
             show ? styles.accordion__icon__rotate : ''
           }`}

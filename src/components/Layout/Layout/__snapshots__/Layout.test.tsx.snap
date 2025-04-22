@@ -1,0 +1,19 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Layout component > matches dnapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="_container_544a97"
+    data-testid="layout-container"
+  >
+    <main
+      class="_mainContent_544a97"
+      data-testid="layout-main"
+    >
+      <p>
+        Snapshot content
+      </p>
+    </main>
+  </div>
+</DocumentFragment>
+`;
