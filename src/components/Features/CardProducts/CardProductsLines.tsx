@@ -44,7 +44,7 @@ export const CardProductsLines: React.FC<{ litePlan: Tariff }> = ({ litePlan }) 
             <li key='lineas-mas-20'>
               <Button
                 variant='picker'  
-                onClick={() => handleShowLines('moreThan20')}
+                onClick={() => handleShowLines('moreThan20')} 
               >
                 Más de 20 Líneas
               </Button>

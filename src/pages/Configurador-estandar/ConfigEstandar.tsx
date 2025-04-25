@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import { BenefictsConfig } from '../../components/Features/BenefictsConfig/BenefictsConfig';
 import { TotalPrice } from '../../components/Features/TotalPrice/TotalPrice';
-import Wizard from '../../components/Features/Wizzard/Wizard';
+import { Wizard } from '../../components/Features/Wizzard/Wizard';
 import { Logo } from '../../components/UI/Logo/Logo';
 import { CartProvider, useCart } from '../../context/CartContext';
 import { WizardProvider } from '../../context/WizardContext';

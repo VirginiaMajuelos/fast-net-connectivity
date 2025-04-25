@@ -6,7 +6,7 @@ import './styles/tokens.css';
 
 import { Header } from './components/Layout/Header/Header';
 import { Layout } from './components/Layout/Layout/Layout';
-import AppRouter from './routes/AppRouter';
+import { AppRouter } from './routes/AppRouter';
 
 const App: React.FC = () => {
   const location = useLocation(); 

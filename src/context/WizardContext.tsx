@@ -2,7 +2,7 @@ import React, { createContext, useContext, useState } from 'react';
 
 import { WizardTypes } from '../components/Features/Wizzard/WizardTypes.types';
 
-const WizardContext = createContext<WizardTypes | undefined>(undefined);
+export const WizardContext = createContext<WizardTypes | undefined>(undefined);
 
 export const useWizard = () => {
   const context = useContext(WizardContext);

@@ -2,9 +2,9 @@ import { VscSettings } from 'react-icons/vsc';
 import { Link } from 'react-router-dom';
 
 import { Button } from '../../UI/Button/Button';
-import styles from './BannerConfigurador.module.css';
+import styles from './ConfiguratorBanner.module.css';
 
-export const BannerConfigurador: React.FC = () => {
+export const ConfiguratorBanner: React.FC = () => {
   return (
     <div className={styles.banner}>
       <div className={styles.bannerContent}>

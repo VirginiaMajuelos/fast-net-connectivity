@@ -13,28 +13,90 @@
     { "id":"feature-5","name": "Soluciones digitales avanzadas", "icon": "FaChartLine" }
   ],
   "features": {
-    "fiber": {
-      "options": [
-        { "id": "fiber-1gbps", "name": "Fibra 1 Gbps", "price": 0, "selected": true, "icon": "FaWifi" }
-      ]
-    },
+  "fiber": {
+    "name": "Fibra óptica",
+    "description": "Fibra simétrica con alta velocidad",
+    "category": "internet",
+    "icon": "FaWifi",
+    "features": [
+      { "id": "fiber-feature-1", "detail": "Router WiFi 6 incluido" },
+      { "id": "fiber-feature-2", "detail": "Instalación gratuita" }
+    ],
+    "options": [
+      {
+        "id": "fiber-1gbps",
+        "name": "Fibra 1 Gbps",
+        "price": 0,
+        "selected": true,
+        "icon": "FaWifi",
+        "category": "internet"
+      }
+    ]
+  },
     "landline": {
       "included": true,
       "description": "1 línea fija incluida",
       "previousPrice": 5.00,
       "icon": "FaPhone"
     },
-    "switchboard": {
-      "options": [
-        { "id": "plus-switchboard", "name": "Centralita Plus", "price": 10.00, "selected": true, "icon": "FaExchangeAlt" }
+    "centralita": {
+      "id": "plus-switchboard",
+      "name": "Centralita Plus",
+      "description": "Centralita avanzada",
+      "price": 10.00,
+      "selected": true,
+      "icon": "FaExchangeAlt",
+      "category": "switchboard",
+      "features": [
+        { "id": "sw-1", "detail": "Incluye atención automática" }
       ]
     },
-    "mobileLines": {
-      "options": [
-        { "id": "basic-mobile-line", "name": "Línea Móvil Básica", "price": 8.00, "quantity": 0, "icon": "FaMobile" },
-        { "id": "intermediate-mobile-line", "name": "Línea Móvil Intermedia", "price": 15.00, "quantity": 0, "icon": "FaMobileAlt" },
-        { "id": "advanced-mobile-line", "name": "Línea Móvil Avanzada", "price": 20.00, "quantity": 0, "icon": "FaMobile" }
-      ]
-    }
+"mobileLines": {
+  "id": "mobile-lines-premium",
+  "name": "Líneas móviles",
+  "description": "Opciones de líneas móviles para empresas",
+  "icon": "FaMobileAlt",
+  "category": "mobile",
+  "options": {
+    "lessThan20": [
+      {
+        "id": "basic-mobile-line",
+        "name": "Línea Móvil Básica",
+        "price": 8.00,
+        "quantity": 0,
+        "icon": "FaMobile",
+        "category": "mobile",
+        "features": [
+          { "id": "ml-feature-1", "detail": "100 minutos y 5 GB de datos" }
+        ]
+      },
+      {
+        "id": "intermediate-mobile-line",
+        "name": "Línea Móvil Intermedia",
+        "price": 15.00,
+        "quantity": 0,
+        "icon": "FaMobileAlt",
+        "category": "mobile",
+        "features": [
+          { "id": "ml-feature-2", "detail": "Llamadas ilimitadas y 25 GB" }
+        ]
+      }
+    ],
+    "moreThan20": [
+      {
+        "id": "advanced-mobile-line",
+        "name": "Línea Móvil Avanzada",
+        "price": 20.00,
+        "quantity": 0,
+        "icon": "FaMobile",
+        "category": "mobile",
+        "features": [
+          { "id": "ml-feature-3", "detail": "Llamadas y datos ilimitados" }
+        ]
+      }
+    ]
+  }
+}
+
   }
 }

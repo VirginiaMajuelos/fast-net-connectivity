@@ -2,7 +2,7 @@
 import litePlan from '../../../services/data/estandar.json';
 import proPlan from '../../../services/data/premium.json';
 import '../../../styles/general.css';
-import { BannerConfigurador } from '../../Features/BannerConfigurador/BannerConfigurador';
+import { ConfiguratorBanner } from '../../Features/ConfiguratorBanner/ConfiguratorBanner';
 import { CardItem } from '../CardItem/CardItem';
 import styles from './ProductsCard.module.css';
 
@@ -16,7 +16,7 @@ export const ProductsCard: React.FC = () => {
         <CardItem plan={proPlan} />
       </div>
       <div className={styles.container__config}>
-        <BannerConfigurador />
+        <ConfiguratorBanner />
       </div>
     </div>
   );

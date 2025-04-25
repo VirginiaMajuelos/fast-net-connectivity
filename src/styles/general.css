@@ -30,6 +30,45 @@ p {
   line-height: var(--font-height-regular);
 }
 
+/* Font size utility classes */
+.fs-xs {
+  font-size: var(--font-size-xs);
+}
+
+.fs-sm {
+  font-size: var(--font-size-sm);
+}
+
+.fs-md {
+  font-size: var(--font-size-md);
+}
+
+.fs-lg {
+  font-size: var(--font-size-lg);
+}
+
+.fs-xl {
+  font-size: var(--font-size-xl);
+}
+
+.fs-xxl {
+  font-size: var(--font-size-xxl);
+}
+
+.fs-xxxl {
+  font-size: var(--font-size-xxxl);
+}
+
+.fs-wild{
+  font-size: 150px;
+  font-weight: 900;
+  text-shadow:  8px 8px var(--color-blue-300);
+}
+
+.text__color{
+color: var(--color-blue-800);
+}
+
 section {
   padding: var(--spacing-lg, 32px);
   margin-bottom: 40px;

@@ -13,7 +13,7 @@ export const Header: React.FC = () => {
           La mejor velocidad y tecnología con nuestras tarifas personalizadas.
         </p>
         <p className={styles.header__priceContainer}>
-          Desde <span className={styles.header__price}>42</span>€/mes
+          Desde <span className={styles.header__price} data-testid='price'>42</span>€/mes
         </p>
       </div>
     </header>

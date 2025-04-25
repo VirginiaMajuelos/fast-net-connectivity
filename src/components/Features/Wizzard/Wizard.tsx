@@ -8,7 +8,7 @@ import { Step } from './Steps/Step';
 import styles from './Wizard.module.css';
 
 
-const Wizard: React.FC = () => {
+export const Wizard: React.FC = () => {
   const { currentStep, goNextPage, goPrevPage } = useWizard();
   const { component: StepComponent, props = {} } = stepsConfig[currentStep];
 
@@ -34,4 +34,3 @@ const Wizard: React.FC = () => {
   );
 };
 
-export default Wizard;

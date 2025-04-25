@@ -15,7 +15,7 @@ interface TotalPriceProps {
 export const TotalPrice: React.FC<TotalPriceProps> = ({ total, openModalId, handleShowModal, handleCloseModal }) => {
   return (
     <div className={styles.container}>
-      <p className='mb0'><span className={styles.price}>{total.toFixed(2)}</span>€/mes</p>
+      <p className='mb0' data-testid='total-price'><span className={styles.price}>{total.toFixed(2)}</span>€/mes</p>
 
       <Button variant='primary' onClick={() => handleShowModal('contactFormModal')}>Me interesa</Button>
 
