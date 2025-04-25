@@ -1,50 +1,41 @@
-# React + TypeScript + Vite
+# Fast Net Connectivity
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a configuration tool for comparing and selecting mobile and fiber internet plans. It helps users to easily configure their preferred connectivity rates by providing a user-friendly interface to compare different offers.
 
-Currently, two official plugins are available:
+## Technologies Used
+- **React**: Frontend framework for building the user interface.
+- **TypeScript**: Provides type safety and ensures better code quality.
+- **Vite**: A fast build tool for modern web development.
+- **CSS Modules**: Scoped and modular CSS styling for components.
+- **React Router DOM**: Routing library for navigation between pages.
+- **Vitest & React Testing Library**: Used for unit and integration testing to ensure code reliability.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+- Interactive configurator for mobile and fiber internet plans.
+- Easy comparison between different rates.
+- Fast and responsive design powered by React and Vite.
+- Unit and integration tests for reliable performance.
 
-## Expanding the ESLint configuration
+## Setup
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+1. Clone the repository:
+  
+   git clone https://github.com/VirginiaMajuelos/fast-net-connectivity.git
 
-- Configure the top-level `parserOptions` property like this:
+2. Install dependencies:
+  
+    npm install
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+3. Run the developtment server:
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+    npm run dev
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+This includes all your requested changes:
+- Mentioning **CSS Modules**, **Vitest & React Testing Library**, and **React Router DOM** in the "Technologies Used" section.
+- Formatting the `npm install` command with a code block.
+- Explanation of **License**.
