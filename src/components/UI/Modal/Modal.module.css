@@ -16,9 +16,18 @@
   padding: 15px;
   border-radius: 8px;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
-  min-width: 400px;
+  min-width: 300px;
   max-width: 600px;
 }
+
+@media (max-width: 480px) {
+  .modalContainer {
+    min-width: 300px;
+    max-width: 390px;
+  }
+}
+
+
 .modalHeader{
   display: flex;
   flex-direction: row;
