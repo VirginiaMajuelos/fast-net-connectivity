@@ -46,7 +46,7 @@
               "id": "basic-mobile-line",
               "name": "Línea Móvil Básica",
               "category": "Líneas Móviles:",
-              "price": 5.00,
+              "price": 5.11,
               "quantity": 0,
               "icon": "FaMobile",
               "features": [
@@ -59,7 +59,7 @@
               "id": "intermediate-mobile-line",
               "name": "Línea Móvil Intermedia",
               "category": "Líneas Móviles:",
-              "price": 10.00,
+              "price": 10.25,
               "quantity": 0,
               "icon": "FaMobileAlt",
               "features": [
@@ -131,8 +131,8 @@
       "icon": "FaExchangeAlt",
       "features": [
         {"id": "detail-1", "detail": "Cola de llamadas"},
-        {"id": "detail-2","detail": "Presentación número de cabecera"},
-        {"id": "detail-3","detail": "Grupo de captura"}
+        {"id": "detail-2","detail": "Asistente avanzado"},
+        {"id": "detail-3","detail": "Operadora automática"}
       ]
     },
     "mobileDevices": {
@@ -175,7 +175,7 @@
           "category": "Dispositivos:",
           "brand": "Realme",
           "model": "C61 4G 6+256GB Dark Green",
-          "price": 10.50,
+          "price": 10.55,
           "previousPrice": 18.99,
           "img": "/assets/mobiles/img-realme-c61.png",
           "quantity": 0,
@@ -203,7 +203,7 @@
           "category": "Dispositivos:",
           "brand": "Samsung",
           "model": "Galaxy A16 4G 128GB Black",
-          "price": 15.60,
+          "price": 15.69,
           "previousPrice": 25.80,
           "img": "/assets/mobiles/Samsung-A16.png",
           "quantity": 0,
@@ -260,7 +260,7 @@
           "name": "Ciberseguridad Avanzada",
           "category": "Soluciones:",
           "description": "Solución integral de ciberseguridad con firewall, protección contra malware y gestión de accesos.",
-          "price": 15.50,
+          "price": 15.55,
           "previousPrice": 20.00,
           "quantity": 0,
           "pricePerLic": "Precio por dispositivo/mes",

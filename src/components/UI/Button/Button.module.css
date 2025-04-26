@@ -28,6 +28,7 @@
   background-color: var(--color-blue-50);
   cursor: pointer;
   font-size: 14px;
+  color: var(--color-blue-800)
 }
 
 .picker:hover{
@@ -38,4 +39,6 @@
   padding: 6px 14px;
   border: 2px solid var(--color-blue-700);
   background-color: var(--color-blue-100);
+  color: var(--color-blue-800)
+
 }

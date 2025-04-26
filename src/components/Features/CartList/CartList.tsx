@@ -28,8 +28,8 @@ export const CartList: React.FC = () => {
             <p className={style.item__nameList} ><strong>Fibra Óptica</strong></p>
           </div>
           <div  className={style.item__list}>
-            <p>1 Fibra Velocidad 600Mbps con WiFi 6</p>
-            <p>(Incluída en el pack)</p>
+            <p>1 Fibra Velocidad 600Mbps</p>
+            <p>Incluído</p>
           </div>
         </li>
         <li>
@@ -38,8 +38,8 @@ export const CartList: React.FC = () => {
             <p className={style.item__nameList}><strong>Línea Fija</strong></p>
           </div>
           <div  className={style.item__list}>
-            <p>1 Línea fija con llamadas ilimitadas</p>
-            <p>(Incluída en el pack)</p>
+            <p>1 Línea ilimitada</p>
+            <p>Incluído</p>
           </div>
         </li>
         <li>
@@ -49,7 +49,7 @@ export const CartList: React.FC = () => {
           </div>
           <div  className={style.item__list}>
             <p>1 Centralita Avanzada</p>
-            <p>(Incluída en el pack)</p>
+            <p>Incluído</p>
           </div>
         </li>
       </ul>
@@ -67,7 +67,7 @@ export const CartList: React.FC = () => {
             {items.map((product) => (
               <div key={product.id} className={style.item__list}>
                 <p>{product.quantity} {product.name}</p>
-                <p>{product.price.toFixed(2)}€/mes</p>
+                <p>{Number(product.price).toFixed(2)}€/mes</p>
               </div>
             ))}
           </li>
